@@ -13892,7 +13892,7 @@ return jQuery;
 
 }));
 
-// function testWebP(callback) {
+//// function testWebP(callback) {
 
 //   var webP = new Image();
 //   webP.onload = webP.onerror = function () {
@@ -13910,9 +13910,9 @@ return jQuery;
 //   }
 // });
 $(function () {
-  $('.skills__portfolio-items').slick({
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
+  $('.portfolio__items').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
     arrows: false,
     dots: true,
     fade: true,
@@ -13927,4 +13927,4 @@ $(function () {
     //   },
     // ]
   });
-})
+});
