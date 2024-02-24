@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TheBox</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240224145452">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo logo">
+					<img class="logo__image" src="img/logo.svg" alt="#">
+					<div class="logo__text"><span>The</span>Box</div>
+				</div>
+
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" data-goto=".hero" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="#" data-goto-header data-goto=".about" class="menu__link">About Us</a></li>
+							<li class="menu__item"><a href="#" data-goto-header data-goto=".projects" class="menu__link">Projects</a></li>
+							<li class="menu__item"><a href="#" data-goto-header data-goto=".services" class="menu__link">Services</a></li>
+							<li class="menu__item"><a href="#" data-goto-header data-goto=".feedback" class="menu__link">Contact Us</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__hero hero">
+				<div class="hero__container">
+					<h1 class="hero__title">
+						Building things is our mission.
+					</h1>
+				</div>
+
+				<div class="hero__slider swiper">
+					<div class="hero__wrapper swiper-wrapper">
+						<div class="hero__slide swiper-slide">
+							<picture><source srcset="img/main-image.webp" type="image/webp"><img class="hero__image" src="img/main-image.png" alt="Image"></picture>
+							<div class="hero__info info-hero">
+								<h4 class="info-hero__overtitle">
+									Feature Projects
+								</h4>
+								<h3 class="info-hero__title">
+									The National University of Architecture
+								</h3>
+							</div>
+						</div>
+
+						<div class="hero__slide swiper-slide">
+							<picture><source srcset="img/main-image-2.webp" type="image/webp"><img class="hero__image" src="img/main-image-2.jpg" alt="Image"></picture>
+							<div class="hero__info info-hero">
+								<h4 class="info-hero__overtitle">
+									Feature Projects
+								</h4>
+								<h3 class="info-hero__title">
+									Sydney Theater
+								</h3>
+							</div>
+						</div>
+
+						<div class="hero__slide swiper-slide">
+							<picture><source srcset="img/main-image-3.webp" type="image/webp"><img class="hero__image" src="img/main-image-3.jpg" alt="Image"></picture>
+							<div class="hero__info info-hero">
+								<h4 class="info-hero__overtitle">
+									Feature Projects
+								</h4>
+								<h3 class="info-hero__title">
+									Glass Egg
+								</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="hero__navigation">
+						<button type="button" class="hero-button-prev">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#left-arrow"></use>
+							</svg>
+							Back
+						</button>
+						<button type="button" class="hero-button-next">
+							Next
+							<svg>
+								<use xlink:href="img/icons/icons.svg#rigth-arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+			</section>
+
+			<section data-watch data-watch-threshold="0.5" data-watch-once class="page__reputation reputation">
+				<div class="reputation__container">
+					<h2 class="reputation__title title anim">
+						Our Reputation
+					</h2>
+					<div class="reputation__items">
+						<div class="reputation__item item-reputation anim-top">
+							<div class="item-reputation__image">
+								<img src="img/reputation/service.svg" alt="Image">
+							</div>
+							<h3 class="item-reputation__title">
+								Best Services
+							</h3>
+							<p class="item-reputation__text">
+								Nullam senectus porttitor in eget. Eget rutrum leo interdum.
+							</p>
+						</div>
+
+						<div class="reputation__item item-reputation anim-top">
+							<div class="item-reputation__image">
+								<img src="img/reputation/service.svg" alt="Image">
+							</div>
+							<h3 class="item-reputation__title">
+								Best Teams
+							</h3>
+							<p class="item-reputation__text">
+								Cursus semper tellus volutpat aliquet lacus.
+							</p>
+						</div>
+
+						<div class="reputation__item item-reputation anim-top">
+							<div class="item-reputation__image">
+								<img src="img/reputation/design.svg" alt="Image">
+							</div>
+							<h3 class="item-reputation__title">
+								Best Designs
+							</h3>
+							<p class="item-reputation__text">
+								Ultricies at ipsum nunc, tristique nam lectus.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__about about" data-watch data-watch-threshold="0.5" data-watch-once>
+				<div class="about__container">
+					<div class="about__image anim-left">
+						<picture><source srcset="img/about/about.webp" type="image/webp"><img src="img/about/about.jpg" alt="Image"></picture>
+					</div>
+					<div class="about__body anim-right">
+						<h2 class="about__title title">
+							About Us
+						</h2>
+						<div class="about__texts">
+							<p>
+								For more than 30 years we have been delivering world-class construction and we’ve built many lasting
+								relationships along
+								the way.
+							</p>
+							<p>
+								We’ve matured into an industry leader and trusted resource for those seeking quality,
+								innovation and
+								reliability when building in the U.S.
+							</p>
+						</div>
+						<a class="about__link" href="#">More on Our History</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__services services" data-watch data-watch-threshold="0.5" data-watch-once>
+				<div class="services__container">
+					<h2 class="services__title title anim">
+						Services
+					</h2>
+					<div class="services__items">
+						<div class="services__item item-services anim">
+							<img class="item-services__image" src="img/services/construction.svg" alt="Image">
+							<div class="item-services__line"></div>
+							<h3 class="item-services__title">Construction</h3>
+						</div>
+
+						<div class="services__item item-services anim">
+							<img class="item-services__image" src="img/services/renovation.svg" alt="Image">
+							<div class="item-services__line"></div>
+							<h3 class="item-services__title">Renovation</h3>
+						</div>
+
+						<div class="services__item item-services anim">
+							<img class="item-services__image" src="img/services/consultation.svg" alt="Image">
+							<div class="item-services__line"></div>
+							<h3 class="item-services__title">Consultation</h3>
+						</div>
+
+						<div class="services__item item-services anim">
+							<img class="item-services__image" src="img/services/repair.svg" alt="Image">
+							<div class="item-services__line"></div>
+							<h3 class="item-services__title">Repair Services</h3>
+						</div>
+
+						<div class="services__item item-services anim">
+							<img class="item-services__image" src="img/services/architecture.svg" alt="Image">
+							<div class="item-services__line"></div>
+							<h3 class="item-services__title">Architecture</h3>
+						</div>
+
+						<div class="services__item item-services anim">
+							<img class="item-services__image" src="img/services/electric.svg" alt="Image">
+							<div class="item-services__line"></div>
+							<h3 class="item-services__title">Electric</h3>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__expirience expirience" data-watch data-watch-threshold="0.5" data-watch-once>
+				<div class="expirience__container">
+					<div class="expirience__stats">
+						<div class="expirience__item expirience__client anim-left">
+							<div class="expirience__num">84</div>
+							<h3 class="expirience__name">Happy Clients</h3>
+							<picture><source srcset="img/expirience/clients.webp" type="image/webp"><img class="expirience__clients" src="img/expirience/clients.png" alt="Image"></picture>
+						</div>
+						<div class="expirience__item expirience__project anim-right">
+							<div class="expirience__num">123</div>
+							<h3 class="expirience__name">Projects Completed</h3>
+							<picture><source srcset="img/expirience/projects.webp" type="image/webp"><img class="expirience__projects" src="img/expirience/projects.png" alt="Image"></picture>
+						</div>
+						<div class="expirience__item expirience__award anim-left">
+							<div class="expirience__num">37</div>
+							<h3 class="expirience__name">Awards Win</h3>
+							<picture><source srcset="img/expirience/awards.webp" type="image/webp"><img class="expirience__awards" src="img/expirience/awards.png" alt="Image"></picture>
+						</div>
+						<div class="expirience__item expirience__busines anim-right">
+							<div class="expirience__num">30</div>
+							<h3 class="expirience__name">Years in Business</h3>
+							<picture><source srcset="img/expirience/business.webp" type="image/webp"><img class="expirience__business" src="img/expirience/business.png" alt="Image"></picture>
+						</div>
+					</div>
+
+					<div class="expirience__body">
+						<h2 class="expirience__title anim-left">
+							30 Years Experience
+						</h2>
+						<div class="expirience__text anim-left">
+							<p>
+								Our company has been the leading provided construction services to clients throughout the USA since
+								1988.
+							</p>
+						</div>
+						<div class="expirience__btn anim-left">
+							<a href="#" class="expirience__link">
+								Contact Us
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__consultation consultation" data-watch data-watch-threshold="0.5" data-watch-once>
+				<picture><source srcset="img/consultation.webp" type="image/webp"><img src="img/consultation.jpg" alt="Bg image" class="consultation__image"></picture>
+				<div class="consultation__container">
+					<div class="consultation__body">
+						<h2 class="consultation__title title anim-left">
+							Free consultation with exceptional quality
+						</h2>
+						<div class="consultation__call anim-left">
+							<a href="tel:+8411022703" class="consultation__phone">
+								Just one call away: <span>+84 1102 2703</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="consultation__btn anim-right">
+						<a href="#" class="consultation__link">
+							Get your consultation
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__projects projects" data-watch data-watch-threshold="0.5" data-watch-once>
+				<div class="projects__container">
+					<h2 class="projects__title title anim">Projects</h2>
+
+					<div data-tabs class="projects__tabs tab-projects">
+						<nav data-tabs-titles class="tab-projects__navigation">
+							<button type="button" class="tab-projects__title _tab-active anim-left">All</button>
+							<button type="button" class="tab-projects__title anim-left">Commercial</button>
+							<button type="button" class="tab-projects__title anim-left">Residential</button>
+							<button type="button" class="tab-projects__title anim-left">Other</button>
+						</nav>
+						<div data-tabs-body class="tab-projects__content anim">
+
+							<div class="tab-projects__body">
+								<div class="tab-projects__slider swiper">
+									<div class="tab-projects__wrapper swiper-wrapper">
+
+										<div class="tab-projects__slide swiper-slide">
+											<div class="tab-projects__item">
+												<a href="#" class="tab-projects__image">
+													<picture><source srcset="img/projects/item-1.webp" type="image/webp"><img src="img/projects/item-1.jpg" alt="Image"></picture>
+												</a>
+												<div class="tab-projects__info">
+													<a href="#" class="tab-projects__name">
+														Wildstone Infra Hotel
+													</a>
+													<a href="#" class="tab-projects__address">
+														2715 Ash Dr. San Jose, South Dakota
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-projects__slide swiper-slide">
+											<div class="tab-projects__item">
+												<a href="#" class="tab-projects__image">
+													<picture><source srcset="img/projects/item-2.webp" type="image/webp"><img src="img/projects/item-2.jpg" alt="Image"></picture>
+												</a>
+												<div class="tab-projects__info">
+													<a href="#" class="tab-projects__name">
+														Wish Stone Building
+													</a>
+													<a href="#" class="tab-projects__address">
+														2972 Westheimer Rd. Santa Ana, Illinois
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-projects__slide swiper-slide">
+											<div class="tab-projects__item">
+												<a href="#" class="tab-projects__image">
+													<picture><source srcset="img/projects/item-3.webp" type="image/webp"><img src="img/projects/item-3.jpg" alt="Image"></picture>
+												</a>
+												<div class="tab-projects__info">
+													<a href="#" class="tab-projects__name">
+														Mr. Parkinston’s House
+													</a>
+													<a href="#" class="tab-projects__address">
+														3517 W. Gray St. Utica, Pennsylvania
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-projects__slide swiper-slide">
+											<div class="tab-projects__item">
+												<a href="#" class="tab-projects__image">
+													<picture><source srcset="img/projects/item-3.webp" type="image/webp"><img src="img/projects/item-3.jpg" alt="Image"></picture>
+												</a>
+												<div class="tab-projects__info">
+													<a href="#" class="tab-projects__name">
+														Oregano Height
+													</a>
+													<a href="#" class="tab-projects__address">
+														2464 Royal Ln. Mesa, New Jersey
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-projects__slide swiper-slide">
+											<div class="tab-projects__item">
+												<a href="#" class="tab-projects__image">
+													<picture><source srcset="img/projects/item-4.webp" type="image/webp"><img src="img/projects/item-4.jpg" alt="Image"></picture>
+												</a>
+												<div class="tab-projects__info">
+													<a href="#" class="tab-projects__name">
+														Wish Stone Building
+													</a>
+													<a href="#" class="tab-projects__address">
+														2972 Westheimer Rd. Santa Ana, Illinois
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-projects__slide swiper-slide">
+											<div class="tab-projects__item">
+												<a href="#" class="tab-projects__image">
+													<picture><source srcset="img/projects/item-3.webp" type="image/webp"><img src="img/projects/item-3.jpg" alt="Image"></picture>
+													</>
+													<div class="tab-projects__info">
+														<a href="#" class="tab-projects__name">
+															Mr. Parkinston’s House
+														</a>
+														<a href="#" class="tab-projects__address">
+															3517 W. Gray St. Utica, Pennsylvania
+														</a>
+													</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="tab-projects__slider-navigation">
+										<button type="button" class="tab-projects-button-prev">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#left-arrow"></use>
+											</svg>
+											Back
+										</button>
+										<div class="tab-projects-pagination"></div>
+										<button type="button" class="tab-projects-button-next">
+											Next
+											<svg>
+												<use xlink:href="img/icons/icons.svg#rigth-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="tab-projects__body">
+								<div class="tab-projects__items">
+									<div class="tab-projects__item">
+										<div class="tab-projects__image">
+											<picture><source srcset="img/projects/item-3.webp" type="image/webp"><img src="img/projects/item-3.jpg" alt="Image"></picture>
+										</div>
+										<div class="tab-projects__info">
+											<h3 class="tab-projects__name">Mr. Parkinston’s House</h3>
+											<a href="#" class="tab-projects__address">
+												3517 W. Gray St. Utica, Pennsylvania
+											</a>
+										</div>
+									</div>
+
+									<div class="tab-projects__item">
+										<div class="tab-projects__image">
+											<picture><source srcset="img/projects/item-2.webp" type="image/webp"><img src="img/projects/item-2.jpg" alt="Image"></picture>
+										</div>
+										<div class="tab-projects__info">
+											<h3 class="tab-projects__name">
+												Wish Stone Building
+											</h3>
+											<a href="#" class="tab-projects__address">
+												2972 Westheimer Rd. Santa Ana, Illinois
+											</a>
+										</div>
+									</div>
+
+									<div class="tab-projects__item">
+										<div class="tab-projects__image">
+											<picture><source srcset="img/projects/item-1.webp" type="image/webp"><img src="img/projects/item-1.jpg" alt="Image"></picture>
+										</div>
+										<div class="tab-projects__info">
+											<h3 class="tab-projects__name">Mr. Parkinston’s House</h3>
+											<a href="#" class="tab-projects__address">
+												3517 W. Gray St. Utica, Pennsylvania
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="tab-projects__body">
+								<div class="tab-projects__items">
+									<div class="tab-projects__item">
+										<div class="tab-projects__image">
+											<picture><source srcset="img/projects/item-2.webp" type="image/webp"><img src="img/projects/item-2.jpg" alt="Image"></picture>
+										</div>
+										<div class="tab-projects__info">
+											<h3 class="tab-projects__name">
+												Wish Stone Building
+											</h3>
+											<a href="#" class="tab-projects__address">
+												2972 Westheimer Rd. Santa Ana, Illinois
+											</a>
+										</div>
+									</div>
+
+									<div class="tab-projects__item">
+										<div class="tab-projects__image">
+											<picture><source srcset="img/projects/item-1.webp" type="image/webp"><img src="img/projects/item-1.jpg" alt="Image"></picture>
+										</div>
+										<div class="tab-projects__info">
+											<h3 class="tab-projects__name">Mr. Parkinston’s House</h3>
+											<a href="#" class="tab-projects__address">
+												3517 W. Gray St. Utica, Pennsylvania
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="tab-projects__body">
+								<div class="tab-projects__items">
+									<div class="tab-projects__item">
+										<div class="tab-projects__image">
+											<picture><source srcset="img/projects/item-3.webp" type="image/webp"><img src="img/projects/item-3.jpg" alt="Image"></picture>
+										</div>
+										<div class="tab-projects__info">
+											<h3 class="tab-projects__name">Mr. Parkinston’s House</h3>
+											<a href="#" class="tab-projects__address">
+												3517 W. Gray St. Utica, Pennsylvania
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section class="page__feedback feedback" data-watch data-watch-threshold="0.5" data-watch-once>
+				<div class="feedback__container">
+					<h2 class="feedback__title title anim">
+						What can us do for you?
+					</h2>
+					<h3 class="feedback__subtitle anim">
+						We are ready to work on a project of any complexity, whether it’s commercial or residential.
+					</h3>
+					<form action="#" class="feedback__form form anim">
+						<div class="form__block">
+							<div class="form__wrap">
+								<input type="text" name="form[]" data-error="Write your name" data-required placeholder="Your Name*" class="form__input">
+							</div>
+							<div class="form__wrap">
+								<input type="text" name="form[]" data-error="Wrong E-mail" data-required="email" placeholder="Email*" class="form__input">
+							</div>
+						</div>
+						<div class="form__block">
+							<select name="form[]" data-class-modif="form" class="form__select">
+								<option value="" selected>Reason for Contacting*</option>
+								<option value="1">Sel 1</option>
+								<option value="2">Sel 2</option>
+								<option value="3">Sel 3</option>
+								<option value="4">Sel 4</option>
+							</select>
+							<div class="form__wrap">
+								<input type="text" name="form[]" placeholder="Phone" class="form__input">
+							</div>
+						</div>
+
+						<textarea class="form__textarea" id="textarea" cols="30" rows="10" placeholder="Message"></textarea>
+						<div class="form__label"><span>*</span> indicates a required field</div>
+
+						<button type="submit" class="form__button">Submit</button>
+					</form>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__leftside">
+						<div class="footer__logo logo">
+							<img class="logo__image" src="img/logo.svg" alt="#">
+							<div class="logo__text"><span>The</span>Box</div>
+						</div>
+						<a href="#" class="footer__link">
+							<span>Address:</span> 6391 Elgin St. Celina, Delaware 10299
+						</a>
+						<a href="tel:8411022703" class="footer__link">
+							<span>Phone:</span> +84 1102 2703
+						</a>
+						<a href="mailto:hello@thebox.com" class="footer__link">
+							<span>Email:</span> hello@thebox.com
+						</a>
+					</div>
+
+					<div class="footer__rightside">
+						<form action="#" class="footer__form">
+							<div class="footer__label">Newsletter:</div>
+							<div class="footer__wrap">
+								<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Your email here" class="footer__input">
+								<button type="submit" class="footer__button">Subscribe</button>
+							</div>
+						</form>
+
+						<div class="footer__social social">
+							<div class="social__label">
+								Social:
+							</div>
+							<ul class="social__items">
+								<li class="social__item">
+									<a href="#" class="social__link">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a href="#" class="social__link">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#linkedin"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a href="#" class="social__link">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__container">
+					<p class="footer__copy">
+						TheBox Company © 2022. All Rights Reserved
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240224145452"></script>
+</body>
+
+</html>
