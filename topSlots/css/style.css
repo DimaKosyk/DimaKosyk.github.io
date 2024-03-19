@@ -1,0 +1,821 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,600&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box
+}
+*::after,
+*::before {
+  display: inline-block
+}
+body,
+html {
+  height: 100%;
+  min-width: 320px
+}
+body {
+  color: #fff;
+  line-height: 1;
+  font-family: Montserrat;
+  font-size: .9375rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+button,
+input,
+textarea {
+  font-family: Montserrat;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent
+}
+input,
+textarea {
+  width: 100%
+}
+button,
+option,
+select {
+  cursor: pointer
+}
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none
+}
+ul li {
+  list-style: none
+}
+img {
+  vertical-align: top
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit
+}
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden
+}
+@supports (overflow:clip) {
+  .wrapper {
+    overflow: clip
+  }
+}
+.wrapper > main {
+  flex: 1 1 auto
+}
+.wrapper > * {
+  min-width: 0
+}
+[class*=__container] {
+  max-width: 77.5rem;
+  margin: 0 auto;
+  padding: 0 1.25rem
+}
+.select {
+  min-width: 0;
+  position: relative;
+  max-width: 17.375rem;
+  width: 100%;
+  height: 3.25rem
+}
+.select__body {
+  position: relative
+}
+.select__title {
+  color: inherit;
+  text-align: left;
+  background-color: #4e4f53;
+  cursor: pointer;
+  width: 100%;
+  border-radius: .4375rem
+}
+.select__value {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  height: 3.25rem;
+  padding: 0 .9375rem;
+  gap: .625rem
+}
+.select__value > * {
+  flex: 1 1 auto
+}
+.select__value:after {
+  content: "";
+  align-self: stretch;
+  flex: 0 0 12px;
+  transition: all .3s ease 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/select-arrow.svg) center center no-repeat
+}
+._select-open .select__value:after {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg)
+}
+.select__value._select-pseudo-label::before {
+  content: attr(data-pseudo-label);
+  opacity: .5
+}
+.select__content {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2
+}
+.select__text {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.select__input {
+  width: 100%;
+  background-color: transparent;
+  height: 100%
+}
+.select__options {
+  color: #fff;
+  position: absolute;
+  top: calc(100% - .0625rem);
+  border-radius: 0 0 4px 4px;
+  min-width: 100%;
+  left: 0;
+  background-color: #4e4f53
+}
+.select__scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 12.5rem
+}
+.select__option {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 5px 15px;
+  color: inherit
+}
+.select__option._select-selected {
+  background-color: #eee
+}
+.select__row {
+  display: inline-flex;
+  align-items: center
+}
+.select--show-top .select__options {
+  top: auto;
+  bottom: calc(100% - .0625rem);
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  padding: 5px 0 10px 0
+}
+._select-tag {
+  cursor: pointer
+}
+.icon-menu {
+  display: none
+}
+.ibg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.ibg--top {
+  -o-object-position: top;
+  object-position: top
+}
+.ibg--bottom {
+  -o-object-position: bottom;
+  object-position: bottom
+}
+.ibg--left {
+  -o-object-position: left;
+  object-position: left
+}
+.ibg--right {
+  -o-object-position: right;
+  object-position: right
+}
+.ibg--contain {
+  -o-object-fit: contain;
+  object-fit: contain
+}
+body {
+  background-color: #191a1c
+}
+.header {
+  background-color: #0e0f10;
+  padding-top: .9875rem;
+  padding-bottom: .9875rem
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.header__logo {
+  position: relative;
+  z-index: 10;
+  width: 5.5625rem;
+  height: 3.5625rem
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  -webkit-column-gap: 2.5rem;
+  -moz-column-gap: 2.5rem;
+  column-gap: 2.5rem;
+  row-gap: .625rem
+}
+.menu__item {
+  position: relative
+}
+.menu__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -.3125rem;
+  width: 0;
+  height: .125rem;
+  background-color: #fff;
+  transition: width .5s ease
+}
+.menu__link {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff
+}
+.footer {
+  padding-top: .9875rem;
+  padding-bottom: .9875rem;
+  background-color: #0e0f10
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.footer__leftside {
+  display: flex;
+  align-items: center;
+  -webkit-column-gap: 1.96875rem;
+  -moz-column-gap: 1.96875rem;
+  column-gap: 1.96875rem
+}
+.footer__copy {
+  font-size: .8125rem
+}
+.footer__rightside {
+  display: flex;
+  align-items: center;
+  -webkit-column-gap: 1.875rem;
+  -moz-column-gap: 1.875rem;
+  column-gap: 1.875rem
+}
+.footer__link {
+  font-size: .8125rem;
+  text-decoration: underline
+}
+.games__title {
+  font-weight: 600;
+  font-size: 1.875rem;
+  margin-bottom: 1.125rem
+}
+.games__text {
+  color: #787a80;
+  margin-bottom: 2.9375rem
+}
+.games__body {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  -webkit-column-gap: 1.875rem;
+  -moz-column-gap: 1.875rem;
+  column-gap: 1.875rem;
+  row-gap: 2.75rem
+}
+.games__card {
+  border-radius: .4375rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column
+}
+.card-games__image {
+  position: relative;
+  aspect-ratio: 360/256.76
+}
+.card-games__image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.card-games__daveloper {
+  position: absolute;
+  top: .5625rem;
+  left: .625rem;
+  overflow: hidden
+}
+.card-games__daveloper img {
+  border-radius: .4375rem;
+  width: 101px;
+  height: 62px
+}
+.card-games__box {
+  max-width: 13.9375rem;
+  width: 100%;
+  background-color: #333436;
+  border-radius: 7.1875rem;
+  padding: .75rem .625rem;
+  position: absolute;
+  bottom: -1.5625rem;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-column-gap: .125rem;
+  -moz-column-gap: .125rem;
+  column-gap: .125rem
+}
+.card-games__box img {
+  width: 1.5rem;
+  height: 1.5rem
+}
+.card-games__rank {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff
+}
+.card-games__body {
+  background-color: #28292c;
+  display: flex;
+  flex-direction: column;
+  padding: 3.0625rem 1.5625rem 1.375rem 1.5625rem;
+  text-align: center;
+  flex-grow: 1
+}
+.card-games__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.375rem;
+  max-width: 18.875rem;
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 1
+}
+.card-games__label {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #787a80;
+  flex-grow: 1
+}
+.card-games__coins {
+  width: 100%;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+  border-top: .0625rem solid #4b4d52;
+  border-bottom: .0625rem solid #4b4d52;
+  margin-bottom: 1.25rem
+}
+.card-games__coins p {
+  max-width: 12.5rem;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 100%;
+  color: #fff;
+  margin: 0 auto
+}
+.card-games__link {
+  display: flex;
+  align-items: center;
+  border-radius: 5.625rem;
+  max-width: 19.625rem;
+  width: 100%;
+  background-color: #4b23ee;
+  padding: .375rem .4375rem;
+  -webkit-column-gap: .3125rem;
+  -moz-column-gap: .3125rem;
+  column-gap: .3125rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 auto 1.5625rem;
+  transition: background-color .5s ease
+}
+.card-games__link img {
+  width: 2.25rem;
+  height: 2.25rem
+}
+.card-games__link span {
+  flex: 1 1 auto
+}
+.card-games__wrap {
+  flex: 0 0 3.125rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5.625rem
+}
+.card-games__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  -webkit-column-gap: .625rem;
+  -moz-column-gap: .625rem;
+  column-gap: .625rem
+}
+.info-card__icon {
+  margin-bottom: .625rem;
+  width: 1.875rem;
+  height: 1.875rem
+}
+.info-card__label {
+  font-weight: 400;
+  font-size: .8125rem;
+  color: #787a80;
+  margin-bottom: .3125rem
+}
+.info-card__nums {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #787a80
+}
+.developers {
+  padding-top: 2.3125rem;
+  padding-bottom: 4.9375rem
+}
+.developers__title {
+  font-weight: 600;
+  font-size: 1.875rem;
+  margin-bottom: 1.125rem
+}
+.developers__text {
+  color: #787a80;
+  margin-bottom: 2.625rem
+}
+.developers__body {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  -webkit-column-gap: 1.875rem;
+  -moz-column-gap: 1.875rem;
+  column-gap: 1.875rem;
+  row-gap: 1.8125rem
+}
+.developers__card {
+  border-radius: .4375rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column
+}
+.card-developers__image {
+  background-color: #28292c;
+  position: relative;
+  aspect-ratio: 277/170
+}
+.card-developers__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.card-developers__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4375rem;
+  background-color: #28292c;
+  padding: 1.375rem .625rem 1.6875rem .625rem
+}
+.card-developers__title {
+  flex-grow: 1;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  text-align: center
+}
+.card-developers__link {
+  border-radius: 5.625rem;
+  padding: .75rem .625rem;
+  max-width: 10.625rem;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  background-color: #4b23ee;
+  margin: 0 auto;
+  transition: background-color .5s ease
+}
+.no-webp .contacts {
+  background-image: url(../img/contact-bg.jpg)
+}
+.contacts {
+  padding-top: 6.5625rem;
+  padding-bottom: 6.5625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center
+}
+.contacts__title {
+  font-weight: 600;
+  font-size: 1.875rem;
+  text-align: center
+}
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1.125rem
+}
+.form-contacts__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-column-gap: 1.875rem;
+  -moz-column-gap: 1.875rem;
+  column-gap: 1.875rem
+}
+.form-contacts__wrap--margin {
+  margin-bottom: 1.0625rem
+}
+.form-contacts__input {
+  border-radius: .4375rem;
+  max-width: 17.375rem;
+  width: 100%;
+  height: 3.25rem;
+  background-color: #4e4f53;
+  padding: 1.25rem .9375rem
+}
+.form-contacts__input::-webkit-input-placeholder {
+  color: #fff
+}
+.form-contacts__input:-ms-input-placeholder {
+  color: #fff
+}
+.form-contacts__input::-ms-input-placeholder {
+  color: #fff
+}
+.form-contacts__input::placeholder {
+  color: #fff
+}
+.form-contacts__button {
+  margin: 0 auto;
+  border-radius: 5.625rem;
+  padding: .75rem .625rem;
+  max-width: 7.5rem;
+  width: 100%;
+  height: 42px;
+  background-color: #4b23ee;
+  transition: background-color .5s ease
+}
+@media (min-width:77.5em) {
+  .games {
+    padding-top: 3.5625rem
+  }
+  .games {
+    padding-bottom: 2.3125rem
+  }
+  .contacts__title {
+    margin-bottom: 2.25rem
+  }
+}
+@media (max-width:35em) {
+  .footer__container {
+    flex-direction: column;
+    row-gap: 2.3125rem
+  }
+  .footer__leftside {
+    flex-direction: column;
+    row-gap: 1.625rem
+  }
+  .footer__rightside {
+    flex-direction: column;
+    row-gap: 1.25rem
+  }
+}
+@media (max-width:20em) {
+  .games {
+    padding-top: 1.5rem
+  }
+  .games {
+    padding-bottom: 1.5625rem
+  }
+  .contacts__title {
+    margin-bottom: 1.5625rem
+  }
+}
+@media (max-width:61.99875em) {
+  .games__body {
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 1.875rem;
+    -webkit-column-gap: .875rem;
+    -moz-column-gap: .875rem;
+    column-gap: .875rem
+  }
+  .developers__body {
+    grid-template-columns: repeat(3,1fr);
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    row-gap: 1.3125rem
+  }
+}
+@media (max-width:47.99875em) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    overflow: auto;
+    padding: 6.25rem .9375rem .9375rem 1.875rem;
+    transition: left .3s;
+    background-color: #0e0f10;
+    z-index: 3
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 4.375rem;
+    left: -100%;
+    top: 0;
+    transition: left .3s;
+    z-index: 2
+  }
+  .menu-open .menu__body {
+    left: 0
+  }
+  .menu-open .menu__body::before {
+    left: 0
+  }
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 1.875rem;
+    height: 1.125rem;
+    z-index: 5
+  }
+  .icon-menu span,
+  .icon-menu::after,
+  .icon-menu::before {
+    content: "";
+    transition: all .3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: .125rem;
+    background-color: #fff
+  }
+  .icon-menu::before {
+    top: 0
+  }
+  .icon-menu::after {
+    bottom: 0
+  }
+  .icon-menu span {
+    top: calc(50% - .0625rem)
+  }
+  .menu-open .icon-menu span {
+    width: 0
+  }
+  .menu-open .icon-menu::before {
+    top: calc(50% - .0625rem);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+  }
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - .0625rem);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  .menu__list {
+    flex-direction: column;
+    row-gap: 1.25rem
+  }
+  .menu__link {
+    font-size: 1.5rem
+  }
+  .developers {
+    padding-top: 1.5625rem;
+    padding-bottom: 3.3125rem
+  }
+  .developers__body {
+    grid-template-columns: repeat(2,1fr);
+    -webkit-column-gap: .875rem;
+    -moz-column-gap: .875rem;
+    column-gap: .875rem
+  }
+  .contacts {
+    background-position: left center;
+    padding-top: 3.375rem;
+    padding-bottom: 4.6875rem
+  }
+}
+@media (max-width:47.99875em) and (any-hover:none) {
+  .icon-menu {
+    cursor: default
+  }
+}
+@media (max-width:37.5em) {
+  .games__body {
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 1.625rem
+  }
+}
+@media (max-width:28.125em) {
+  .form-contacts__wrap {
+    flex-direction: column;
+    row-gap: 1.125rem
+  }
+}
+@media (min-width:20em) and (max-width:77.5em) {
+  @supports (padding-top:clamp(1.5rem ,0.7826086957rem + 3.5869565217vw ,3.5625rem)) {
+    .games {
+      padding-top: clamp(1.5rem ,.7826086957rem + 3.5869565217vw ,3.5625rem)
+    }
+  }
+  @supports not (padding-top:clamp(1.5rem ,0.7826086957rem + 3.5869565217vw ,3.5625rem)) {
+    .games {
+      padding-top: calc(1.5rem + 2.0625 * (100vw - 20rem)/ 57.5)
+    }
+  }
+  @supports (padding-bottom:clamp(1.5625rem ,1.3016304348rem + 1.3043478261vw ,2.3125rem)) {
+    .games {
+      padding-bottom: clamp(1.5625rem ,1.3016304348rem + 1.3043478261vw ,2.3125rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(1.5625rem ,1.3016304348rem + 1.3043478261vw ,2.3125rem)) {
+    .games {
+      padding-bottom: calc(1.5625rem + .75 * (100vw - 20rem)/ 57.5)
+    }
+  }
+  @supports (margin-bottom:clamp(1.5625rem ,1.3233695652rem + 1.1956521739vw ,2.25rem)) {
+    .contacts__title {
+      margin-bottom: clamp(1.5625rem ,1.3233695652rem + 1.1956521739vw ,2.25rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1.5625rem ,1.3233695652rem + 1.1956521739vw ,2.25rem)) {
+    .contacts__title {
+      margin-bottom: calc(1.5625rem + .6875 * (100vw - 20rem)/ 57.5)
+    }
+  }
+}
+@media (any-hover:hover) {
+  .select__option:hover {
+    background: #191a1c
+  }
+  .menu__item:hover::before {
+    width: 100%
+  }
+  .card-games__link:hover {
+    background-color: #654cc7
+  }
+  .card-developers__link:hover {
+    background-color: #654cc7
+  }
+  .form-contacts__button:hover {
+    background-color: #654cc7
+  }
+}
+.webp .contacts {
+  background-image: url(../img/contact-bg.webp)
+}
