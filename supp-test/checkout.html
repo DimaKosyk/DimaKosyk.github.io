@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Checkout</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240918120358">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--Swiper JS-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240918120358" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240918120358" async></script>
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+
+					<a href="home.html" class="header__logo">
+						Supplenation
+					</a>
+
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu" data-da=".header__rightside, 991.98"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list" id="menu">
+								<li class="menu__drop-down">
+									<a href="#" class="menu-link__drop-down">
+										Catalog
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</a>
+									<div class="menu__submenu submenu-uniq">
+										<ul>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-1.svg" alt="Brain icon">
+													</div>
+													Memory Supplements
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-2.svg" alt="Eye icon">
+													</div>
+													Eye Vitamins
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-3.svg" alt="Weight icon">
+													</div>
+													Weight Loss Supplements
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-4.svg" alt="Brain icon">
+													</div>
+													Brain Supplements
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Products</a></li>
+								<li class="menu__drop-down menu__drop-down--simple">
+									<a href="#" class="menu-link__drop-down">
+										Brands
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</a>
+									<div class="menu__submenu submenu-simple">
+										<ul>
+											<li><a href="#">For the eyes</a></li>
+											<li><a href="#">For memory</a></li>
+											<li><a href="#">For the brain</a></li>
+											<li><a href="#">Weight loss</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">Contacts</a></li>
+							</ul>
+							<ul class="menu__socials">
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tik-tok"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="header__rightside">
+						<a href="#" class="header__get" data-da=".menu__body, 991.98">
+							get in touch
+						</a>
+						<button class="header__basket">
+							<img src="img/content-icons/basket.svg" alt="Basket icon">
+							<span>1</span>
+						</button>
+					</div>
+
+				</div>
+			</div>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const menuLinks = document.querySelectorAll('.menu-link__drop-down');
+
+					menuLinks.forEach(link => {
+						link.addEventListener('click', function(event) {
+							event.preventDefault();
+
+							const parentItem = this.parentNode;
+							const isActive = parentItem.classList.contains('drop-down');
+
+							document.querySelectorAll('.menu__drop-down').forEach(item => {
+								item.classList.remove('drop-down');
+							});
+
+							if (!isActive) {
+								parentItem.classList.add('drop-down');
+							}
+						});
+					});
+
+					document.addEventListener('click', function(event) {
+						const target = event.target;
+
+						if (!target.closest('#menu')) {
+							document.querySelectorAll('.menu__item').forEach(item => {
+								item.classList.remove('drop-down');
+							});
+						}
+					});
+				});
+			</script>
+		</header>
+		<main class="page">
+
+			<section class="checkout-page">
+				<div class="checkout-page__container">
+					<div class="checkout-page__body">
+
+						<a href="home.html" class="checkout-page__back">
+							Back
+						</a>
+
+						<div class="checkout-page__header">
+							<div class="checkout-page__title heading-2">
+								<h2>
+									Checkout
+								</h2>
+							</div>
+						</div>
+
+						<form class="checkout-page__form">
+
+							<div class="checkout-page__content">
+
+								<div class="checkout-page__wrapper wrapper-checkout">
+									<div class="wrapper-checkout__title heading-6">
+										<h6>Contact infromation</h6>
+									</div>
+									<div class="wrapper-checkout__content">
+										<div class="wrapper-checkout__box">
+											<div class="wrapper-checkout__input-container">
+												<input type="text" id="first-name" class="wrapper-checkout__input" placeholder="" required>
+												<label for="first-name" class="wrapper-checkout__label">First name</label>
+											</div>
+
+											<div class="wrapper-checkout__input-container">
+												<input type="text" id="last-name" class="wrapper-checkout__input" placeholder="" required>
+												<label for="last-name" class="wrapper-checkout__label">Last name</label>
+											</div>
+										</div>
+
+										<div class="wrapper-checkout__box">
+											<div class="wrapper-checkout__input-container">
+												<input type="mail" id="email-address" class="wrapper-checkout__input" placeholder="" required>
+												<label for="email-address" class="wrapper-checkout__label">Email address</label>
+											</div>
+
+											<div class="wrapper-checkout__input-container">
+												<input type="phone" id="phone-number" class="wrapper-checkout__input" placeholder="" required>
+												<label for="phone-number" class="wrapper-checkout__label">Phone number</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-page__wrapper wrapper-checkout">
+									<div class="wrapper-checkout__title heading-6">
+										<h6>Delivery</h6>
+									</div>
+									<div class="wrapper-checkout__content">
+										<div class="wrapper-checkout__select-container">
+											<div id="delivery-country" class="wrapper-checkout__custom-select custom-select" placeholder="">
+												<div class="wrapper-checkout__select-trigger select-trigger">
+													<span>United state</span>
+													<svg>
+														<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+													</svg>
+												</div>
+												<div class="wrapper-checkout__custom-options custom-options">
+													<span class="wrapper-checkout__custom-option custom-option" data-value="united-state">United
+														state</span>
+													<span class="wrapper-checkout__custom-option custom-option" data-value="italy">Italy</span>
+													<span class="wrapper-checkout__custom-option custom-option" data-value="canada">Canada</span>
+													<span class="wrapper-checkout__custom-option custom-option" data-value="spain">Spain</span>
+													<span class="wrapper-checkout__custom-option custom-option" data-value="germany">Germany</span>
+												</div>
+											</div>
+
+											<label for="delivery-country" class="wrapper-checkout__label">Country</label>
+										</div>
+
+										<div class="wrapper-checkout__input-container">
+											<input type="text" id="delivery-city" class="wrapper-checkout__input" placeholder="" required>
+											<label for="delivery-city" class="wrapper-checkout__label">City</label>
+										</div>
+
+										<div class="wrapper-checkout__box">
+											<div class="wrapper-checkout__input-container">
+												<input type="text" id="delivery-state" class="wrapper-checkout__input" placeholder="" required>
+												<label for="delivery-state" class="wrapper-checkout__label">State</label>
+											</div>
+
+											<div class="wrapper-checkout__input-container">
+												<input type="text" id="delivery-zip" class="wrapper-checkout__input" placeholder="" required>
+												<label for="delivery-zip" class="wrapper-checkout__label">Zip code</label>
+											</div>
+										</div>
+
+										<div class="wrapper-checkout__input-container">
+											<input type="text" id="delivery-address" class="wrapper-checkout__input" placeholder="" required>
+											<label for="delivery-address" class="wrapper-checkout__label">Address</label>
+										</div>
+
+										<div class="wrapper-checkout__input-container">
+											<input type="text" id="delivery-apartment" class="wrapper-checkout__input" placeholder="" required>
+											<label for="delivery-apartment" class="wrapper-checkout__label">Apartment, suite, etc.
+												(optional)</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-page__wrapper wrapper-checkout">
+									<div class="wrapper-checkout__title heading-6">
+										<h6>Shipping method</h6>
+									</div>
+									<div class="wrapper-checkout__text text">
+										<p>
+											Be aware that the USPS might experience delays or slow-downs due to weather conditions and volume
+											at this time.
+										</p>
+									</div>
+									<div class="wrapper-checkout__content">
+										<div class="wrapper-checkout__options">
+											<div class="wrapper-checkout__option">
+												<input type="radio" id="free-shipping" name="shipping" value="free-shipping">
+												<label for="free-shipping" class="wrapper-checkout__shipping">
+													<span class="radio-circle">
+														<div class="radio-circle-center"></div>
+													</span>
+													<div class="wrapper-checkout__shipping-title">
+														Free shipping <span>(3-5 days)</span>
+													</div>
+													<div class="wrapper-checkout__price">
+														$0.00
+													</div>
+												</label>
+											</div>
+
+											<div class="wrapper-checkout__option">
+												<input type="radio" id="express-shipping" name="shipping" value="express-shipping">
+												<label for="express-shipping" class="wrapper-checkout__shipping">
+													<span class="radio-circle">
+														<div class="radio-circle-center"></div>
+													</span>
+													<div class="wrapper-checkout__shipping-title">
+														Express shipping <span>(1-2 days)</span>
+													</div>
+													<div class="wrapper-checkout__price">
+														$5.00
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-page__wrapper wrapper-checkout">
+									<div class="wrapper-checkout__title heading-6">
+										<h6>Billing address</h6>
+									</div>
+
+									<div class="wrapper-checkout__content">
+										<div class="wrapper-checkout__options">
+											<div class="wrapper-checkout__option billing-checkout">
+												<input type="radio" id="same-shipping-address" name="billing" value="same" checked>
+												<label for="same-shipping-address" class="billing-checkout__label">
+													<span class="radio-circle">
+														<div class="radio-circle-center"></div>
+													</span>
+													<div class="billing-checkout__title">
+														Same as shipping address
+													</div>
+												</label>
+
+												<div class="billing-checkout__body" id="same-address-fields">
+													<div class="wrapper-checkout__select-container">
+														<div id="same-country" class="wrapper-checkout__custom-select custom-select" placeholder="">
+															<div class="wrapper-checkout__select-trigger select-trigger">
+																<span>United state</span>
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+																</svg>
+															</div>
+															<div class="wrapper-checkout__custom-options custom-options">
+																<span class="wrapper-checkout__custom-option custom-option" data-value="united-state">United
+																	state</span>
+																<span class="wrapper-checkout__custom-option custom-option" data-value="italy">Italy</span>
+																<span class="wrapper-checkout__custom-option custom-option" data-value="canada">Canada</span>
+																<span class="wrapper-checkout__custom-option custom-option" data-value="spain">Spain</span>
+																<span class="wrapper-checkout__custom-option custom-option" data-value="germany">Germany</span>
+															</div>
+														</div>
+
+														<label for="same-country" class="wrapper-checkout__label">Country</label>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="same-city" class="wrapper-checkout__input" placeholder="" required>
+														<label for="same-city" class="wrapper-checkout__label">City</label>
+													</div>
+
+													<div class="wrapper-checkout__box">
+														<div class="wrapper-checkout__input-container">
+															<input type="text" id="same-state" class="wrapper-checkout__input" placeholder="" required>
+															<label for="same-state" class="wrapper-checkout__label">State</label>
+														</div>
+
+														<div class="wrapper-checkout__input-container">
+															<input type="text" id="same-zip" class="wrapper-checkout__input" placeholder="" required>
+															<label for="same-zip" class="wrapper-checkout__label">Zip code</label>
+														</div>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="same-address" class="wrapper-checkout__input" placeholder="" required>
+														<label for="same-address" class="wrapper-checkout__label">Address</label>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="same-apartment" class="wrapper-checkout__input" placeholder="" required>
+														<label for="same-apartment" class="wrapper-checkout__label">Apartment, suite, etc.
+															(optional)</label>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="wrapper-checkout__option billing-checkout">
+												<input type="radio" id="different-billing-address" name="billing" value="different">
+												<label for="different-billing-address" class="billing-checkout__label">
+													<span class="radio-circle">
+														<div class="radio-circle-center"></div>
+													</span>
+													<div class="billing-checkout__title">
+														PayPal
+													</div>
+												</label>
+
+												<div class="billing-checkout__body" id="different-address-fields">
+													<div class="wrapper-checkout__select-container">
+														<div id="different-country" class="wrapper-checkout__custom-select custom-select" placeholder="">
+															<div class="wrapper-checkout__select-trigger select-trigger">
+																<span>United state</span>
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+																</svg>
+															</div>
+															<div class="wrapper-checkout__custom-options custom-options">
+																<span class="wrapper-checkout__custom-option custom-option" data-value="united-state">United
+																	state</span>
+																<span class="wrapper-checkout__custom-option custom-option" data-value="italy">Italy</span>
+																<span class="wrapper-checkout__custom-option custom-option" data-value="canada">Canada</span>
+																<span class="wrapper-checkout__custom-option custom-option" data-value="spain">Spain</span>
+																<span class="wrapper-checkout__custom-option custom-option" data-value="germany">Germany</span>
+															</div>
+														</div>
+
+														<label for="different-country" class="wrapper-checkout__label">Country</label>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="different-city" class="wrapper-checkout__input" placeholder="" required>
+														<label for="different-city" class="wrapper-checkout__label">City</label>
+													</div>
+
+													<div class="wrapper-checkout__box">
+														<div class="wrapper-checkout__input-container">
+															<input type="text" id="different-state" class="wrapper-checkout__input" placeholder="" required>
+															<label for="different-state" class="wrapper-checkout__label">State</label>
+														</div>
+
+														<div class="wrapper-checkout__input-container">
+															<input type="text" id="different-zip" class="wrapper-checkout__input" placeholder="" required>
+															<label for="different-zip" class="wrapper-checkout__label">Zip code</label>
+														</div>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="different-address" class="wrapper-checkout__input" placeholder="" required>
+														<label for="different-address" class="wrapper-checkout__label">Address</label>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="different-apartment" class="wrapper-checkout__input" placeholder="" required>
+														<label for="different-apartment" class="wrapper-checkout__label">Apartment, suite, etc.
+															(optional)</label>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-page__wrapper wrapper-checkout">
+									<div class="wrapper-checkout__title heading-6">
+										<h6>Payment</h6>
+									</div>
+									<div class="wrapper-checkout__text text">
+										<p>
+											All transactions are secure and encrypted.
+										</p>
+									</div>
+
+									<div class="wrapper-checkout__content">
+										<div class="wrapper-checkout__options">
+											<div class="wrapper-checkout__option payment-checkout">
+												<input type="radio" id="credit-card" name="payment" value="credit" checked>
+												<label for="credit-card" class="payment-checkout__label">
+													<span class="radio-circle">
+														<div class="radio-circle-center"></div>
+													</span>
+													<div class="payment-checkout__title">
+														Credit card
+													</div>
+													<div class="payment-checkout__logos">
+														<img src="img/payment/payment-1.svg" alt="Image">
+														<img src="img/payment/payment-2.svg" alt="Image">
+														<img src="img/payment/payment-6.svg" alt="Image">
+													</div>
+												</label>
+
+												<div class="payment-checkout__body" id="credit-fields">
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="card-number" class="wrapper-checkout__input" placeholder="" required>
+														<label for="card-number" class="wrapper-checkout__label">Card number</label>
+													</div>
+
+													<div class="wrapper-checkout__box">
+														<div class="wrapper-checkout__input-container">
+															<input type="text" id="expiration-date" class="wrapper-checkout__input" placeholder="" required>
+															<label for="expiration-date" class="wrapper-checkout__label">Expiration date (MM /
+																YY)</label>
+														</div>
+
+														<div class="wrapper-checkout__input-container">
+															<input type="text" id="security-code" class="wrapper-checkout__input" placeholder="" required>
+															<label for="security-code" class="wrapper-checkout__label">Security code</label>
+														</div>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="card-name" class="wrapper-checkout__input" placeholder="" required>
+														<label for="card-name" class="wrapper-checkout__label">Name on card</label>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="payment-apartment" class="wrapper-checkout__input" placeholder="" required>
+														<label for="payment-apartment" class="wrapper-checkout__label">Apartment, suite, etc.
+															(optional)</label>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="wrapper-checkout__option payment-checkout">
+												<input type="radio" id="paypal-card" name="payment" value="paypal">
+												<label for="paypal-card" class="payment-checkout__label">
+													<span class="radio-circle">
+														<div class="radio-circle-center"></div>
+													</span>
+													<div class="payment-checkout__title">
+														PayPal
+													</div>
+													<div class="payment-checkout__logos">
+														<img src="img/payment/payment-6.svg" alt="Image">
+													</div>
+												</label>
+
+												<div class="payment-checkout__body" id="paypal-fields">
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="card-number-paypal" class="wrapper-checkout__input" placeholder="" required>
+														<label for="card-number-paypal" class="wrapper-checkout__label">Card number</label>
+													</div>
+
+													<div class="wrapper-checkout__box">
+														<div class="wrapper-checkout__input-container">
+															<input type="text" id="expiration-date-paypal" class="wrapper-checkout__input" placeholder="" required>
+															<label for="expiration-date-paypal" class="wrapper-checkout__label">Expiration date (MM /
+																YY)</label>
+														</div>
+
+														<div class="wrapper-checkout__input-container">
+															<input type="text" id="security-code-paypal" class="wrapper-checkout__input" placeholder="" required>
+															<label for="security-code-paypal" class="wrapper-checkout__label">Security code</label>
+														</div>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="card-name-paypal" class="wrapper-checkout__input" placeholder="" required>
+														<label for="card-name-paypal" class="wrapper-checkout__label">Name on card</label>
+													</div>
+
+													<div class="wrapper-checkout__input-container">
+														<input type="text" id="payment-apartment-paypal" class="wrapper-checkout__input" placeholder="" required>
+														<label for="payment-apartment-paypal" class="wrapper-checkout__label">Apartment, suite, etc.
+															(optional)</label>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-page__wrapper wrapper-checkout">
+									<div class="wrapper-checkout__title heading-6">
+										<h6>Comment to order</h6>
+									</div>
+									<div class="wrapper-checkout__content">
+										<div class="wrapper-checkout__textarea-container">
+											<textarea type="text" id="checkout-comment" class="wrapper-checkout__textarea" placeholder="" required></textarea>
+											<label for="checkout-comment" class="wrapper-checkout__label">Your comment</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-page__money-back money-back">
+									<div class="money-back__wrap">
+										<div class="money-back__image">
+											<img src="img/main/money-back.svg" alt="Image">
+										</div>
+										<div class="money-back__title money-back__title--mobile">
+											14-day money-back guarantee
+										</div>
+									</div>
+
+									<div class="money-back__content">
+										<div class="money-back__title money-back__title--pc">
+											14-day money-back guarantee
+										</div>
+
+										<div class="money-back__text text">
+											<p>
+												If you are not satisfied with the product, simply return it and we will refund your money.
+											</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="checkout-page__aside aside-checkout">
+								<div data-spollers class="aside-checkout__spollers spollers-aside-checkout">
+									<details class="spollers-aside-checkout__item">
+										<summary class="spollers-aside-checkout__title">
+											<div class="spollers-aside-checkout__wrap heading-6">
+												<h6>
+													<span>2</span> items
+												</h6>
+											</div>
+											<div class="spollers-aside-checkout__arrow">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
+												</svg>
+											</div>
+										</summary>
+										<div class="spollers-aside-checkout__body">
+											<div class="aside-checkout__item item-basket">
+												<a href="#" class="item-basket__image">
+													<img src="img/product/product-1.webp" alt="Image">
+												</a>
+
+												<div class="item-basket__leftside">
+													<div class="item-basket__info">
+														<a href="#" class="item-basket__title">
+															Neuriva Plus, Brain Health  Supplement with Coffee Cherry Extract & Phosphatidylseri...
+														</a>
+
+														<div class="item-basket__code">
+															Code: <span>0000000</span>
+														</div>
+
+														<div class="item-basket__gummy">
+															<span>50</span> gummies
+														</div>
+													</div>
+
+													<div class="item-basket__navigation navigation-basket">
+														<div class="navigation-basket__top">
+															<div class="navigation-basket__nav">
+																<button class="navigation-basket__minus">
+																	<svg>
+																		<use xlink:href="img/icons/icons.svg#minus"></use>
+																	</svg>
+																</button>
+																<div class="navigation-basket__count">3</div>
+																<button class="navigation-basket__plus">
+																	<svg>
+																		<use xlink:href="img/icons/icons.svg#plus"></use>
+																	</svg>
+																</button>
+															</div>
+
+															<button class="navigation-basket__delete">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#clear"></use>
+																</svg>
+															</button>
+														</div>
+
+														<div class="navigation-basket__prices">
+															<div class="navigation-basket__new-price">$50.00</div>
+															<div class="navigation-basket__old-price">$50.00</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="aside-checkout__item item-basket">
+												<a href="#" class="item-basket__image">
+													<img src="img/product/product-1.webp" alt="Image">
+												</a>
+
+												<div class="item-basket__leftside">
+													<div class="item-basket__info">
+														<a href="#" class="item-basket__title">
+															Neuriva Plus, Brain Health  Supplement with Coffee Cherry Extract & Phosphatidylseri...
+														</a>
+
+														<div class="item-basket__code">
+															Code: <span>0000000</span>
+														</div>
+
+														<div class="item-basket__gummy">
+															<span>50</span> gummies
+														</div>
+													</div>
+
+													<div class="item-basket__navigation navigation-basket">
+														<div class="navigation-basket__top">
+															<div class="navigation-basket__nav">
+																<button class="navigation-basket__minus">
+																	<svg>
+																		<use xlink:href="img/icons/icons.svg#minus"></use>
+																	</svg>
+																</button>
+																<div class="navigation-basket__count">3</div>
+																<button class="navigation-basket__plus">
+																	<svg>
+																		<use xlink:href="img/icons/icons.svg#plus"></use>
+																	</svg>
+																</button>
+															</div>
+
+															<button class="navigation-basket__delete">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#clear"></use>
+																</svg>
+															</button>
+														</div>
+
+														<div class="navigation-basket__prices">
+															<div class="navigation-basket__new-price">$50.00</div>
+															<div class="navigation-basket__old-price">$50.00</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="aside-checkout__item item-basket">
+												<a href="#" class="item-basket__image">
+													<img src="img/product/product-1.webp" alt="Image">
+												</a>
+
+												<div class="item-basket__leftside">
+													<div class="item-basket__info">
+														<a href="#" class="item-basket__title">
+															Neuriva Plus, Brain Health  Supplement with Coffee Cherry Extract & Phosphatidylseri...
+														</a>
+
+														<div class="item-basket__code">
+															Code: <span>0000000</span>
+														</div>
+
+														<div class="item-basket__gummy">
+															<span>50</span> gummies
+														</div>
+													</div>
+
+													<div class="item-basket__navigation navigation-basket">
+														<div class="navigation-basket__top">
+															<div class="navigation-basket__nav">
+																<button class="navigation-basket__minus">
+																	<svg>
+																		<use xlink:href="img/icons/icons.svg#minus"></use>
+																	</svg>
+																</button>
+																<div class="navigation-basket__count">3</div>
+																<button class="navigation-basket__plus">
+																	<svg>
+																		<use xlink:href="img/icons/icons.svg#plus"></use>
+																	</svg>
+																</button>
+															</div>
+
+															<button class="navigation-basket__delete">
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#clear"></use>
+																</svg>
+															</button>
+														</div>
+
+														<div class="navigation-basket__prices">
+															<div class="navigation-basket__new-price">$50.00</div>
+															<div class="navigation-basket__old-price">$50.00</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</details>
+								</div>
+
+
+
+
+								<div class="aside-checkout__content">
+									<div class="aside-checkout__line">
+										<div class="aside-checkout__label">2 items</div>
+										<div class="aside-checkout__dots-line"></div>
+										<div class="aside-checkout__price">$100.00</div>
+									</div>
+
+									<div class="aside-checkout__line aside-checkout__line--discount">
+										<div class="aside-checkout__label">Discount</div>
+										<div class="aside-checkout__dots-line"></div>
+										<div class="aside-checkout__price">– $100.00</div>
+									</div>
+
+									<div class="aside-checkout__line">
+										<div class="aside-checkout__label">Shipping</div>
+										<div class="aside-checkout__dots-line"></div>
+										<div class="aside-checkout__price">$0.00</div>
+									</div>
+								</div>
+
+
+								<div class="aside-checkout__footer">
+									<div class="aside-checkout__top">
+										Total
+										<span>$100.00</span>
+									</div>
+									<div class="aside-checkout__check">
+										<input id="aside-checkout-check" class="aside-checkout__checkbox" type="checkbox" name="check">
+										<label for="aside-checkout-check" class="aside-checkout__warning">
+											<span>
+												I consent to the processing of <a href="#" target="_blank">personal data</a>
+											</span>
+										</label>
+									</div>
+									<button class="aside-checkout__button btn">
+										Confirm and pay
+									</button>
+								</div>
+							</div>
+
+						</form>
+
+
+						<div class="checkout-page__links">
+							<a href="#" class="checkout-page__link">Shipping policy</a>
+							<a href="#" class="checkout-page__link">Contacts</a>
+							<a href="#" class="checkout-page__link">Privacy policy</a>
+						</div>
+					</div>
+				</div>
+
+				<script>
+					document.addEventListener("DOMContentLoaded", () => {
+
+						document.querySelectorAll('.select-trigger').forEach(trigger => {
+							trigger.addEventListener('click', function() {
+								const select = this.closest('.custom-select');
+								select.classList.toggle('open');
+
+								document.querySelectorAll('.custom-select').forEach(otherSelect => {
+									if (otherSelect !== select) {
+										otherSelect.classList.remove('open');
+									}
+								});
+							});
+						});
+
+						document.querySelectorAll('.custom-option').forEach(option => {
+							option.addEventListener('click', function() {
+								const select = this.closest('.custom-select');
+								select.querySelector('.select-trigger span').textContent = this.textContent;
+								select.classList.remove('open');
+							});
+						});
+
+						window.addEventListener('click', function(e) {
+							document.querySelectorAll('.custom-select').forEach(select => {
+								if (!select.contains(e.target)) {
+									select.classList.remove('open');
+								}
+							});
+						});
+					});
+
+					document.addEventListener("DOMContentLoaded", () => {
+
+						const creditFields = document.getElementById('credit-fields');
+						const paypalFields = document.getElementById('paypal-fields');
+						const paymentOptions = document.querySelectorAll('input[name="payment"]');
+
+						function toggleFields() {
+							const selectedOption = document.querySelector('input[name="payment"]:checked').value;
+
+							if (selectedOption === 'credit') {
+								creditFields.style.display = 'flex';
+								paypalFields.style.display = 'none';
+							} else if (selectedOption === 'paypal') {
+								creditFields.style.display = 'none';
+								paypalFields.style.display = 'flex';
+							}
+						}
+
+						window.addEventListener('DOMContentLoaded', toggleFields);
+
+						paymentOptions.forEach(option => {
+							option.addEventListener('change', toggleFields);
+						});
+					});
+
+					document.addEventListener("DOMContentLoaded", () => {
+
+						const creditFields = document.getElementById('same-address-fields');
+						const paypalFields = document.getElementById('different-address-fields');
+						const paymentOptions = document.querySelectorAll('input[name="billing"]');
+
+						function toggleFields() {
+							const selectedOption = document.querySelector('input[name="billing"]:checked').value;
+
+							if (selectedOption === 'same') {
+								creditFields.style.display = 'flex';
+								paypalFields.style.display = 'none';
+							} else if (selectedOption === 'different') {
+								creditFields.style.display = 'none';
+								paypalFields.style.display = 'flex';
+							}
+						}
+
+						window.addEventListener('DOMContentLoaded', toggleFields);
+
+						paymentOptions.forEach(option => {
+							option.addEventListener('change', toggleFields);
+						});
+					});
+				</script>
+
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__leftside">
+						<div class="footer__top">
+							<a href="home.html" class="footer__logo">
+								Supplenation
+							</a>
+							<ul class="footer__socials">
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tik-tok"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer__bottom" data-da=".footer__content, 767.98, 1">
+							<div class="footer__copy">© Supplenation, 2024.</div>
+							<a href="#" class="footer__dev"><span>://</span> Development and promotion</a>
+						</div>
+					</div>
+
+					<div class="footer__content content-footer">
+						<div class="content-footer__top">
+
+							<div data-spollers="992,max" data-one-spoller class="spollers content-footer__spollers">
+								<details class="content-footer__item">
+									<summary class="content-footer__title">
+										Navigation
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</summary>
+									<div class="content-footer__body">
+										<ul class="content-footer__list">
+											<li><a href="#">About us</a></li>
+											<li><a href="#">Products</a></li>
+											<li><a href="#">Brands</a></li>
+											<li><a href="#">Contacts</a></li>
+											<li><a href="#">Privacy Policy</a></li>
+										</ul>
+									</div>
+								</details>
+
+								<details class="content-footer__item">
+									<summary class="content-footer__title">
+										Catalog
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</summary>
+									<div class="content-footer__body">
+										<ul class="content-footer__list">
+											<li><a href="#">For the eyes</a></li>
+											<li><a href="#">For memory</a></li>
+											<li><a href="#">For the brain</a></li>
+											<li><a href="#">Weight loss</a></li>
+										</ul>
+									</div>
+								</details>
+
+								<details class="content-footer__item">
+									<summary class="content-footer__title">
+										Contacts
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</summary>
+									<div class="content-footer__body">
+										<ul class="content-footer__list">
+											<li><a href="tel:15555551234">+1 555 555-1234</a></li>
+											<li><a href="mailto:info@supplenation.es">info@supplenation.es</a></li>
+											<li><a href="#">Carrer de Narcís Giralt 67, Sabadell 08202</a></li>
+										</ul>
+									</div>
+								</details>
+							</div>
+
+
+							<div class="content-footer__get-touch get-touch-footer">
+								<div class="get-touch-footer__title">
+									get in touch
+								</div>
+								<form class="get-touch-footer__form form">
+									<label for="footer-mail" class="form__label">Need to contact us, leave your email</label>
+									<input type="text" name="mail" id="footer-mail" placeholder="Enter your email" class="form__input">
+
+									<div class="form__check">
+										<input id="check-footer" class="form__checkbox" type="checkbox" name="check">
+										<label for="check-footer" class="form__warning">
+											<span>
+												I consent to the processing of <a href="#" target="_blank">personal data</a>
+											</span>
+										</label>
+									</div>
+
+									<button type="submit" class="form__button btn">
+										Send mail
+									</button>
+								</form>
+							</div>
+						</div>
+
+
+						<div class="content-footer__text">
+							<p>
+								The statements made regarding these products have not been evaluated by the Food and Drug Administration.
+								The efficacy
+								of these products has not been confirmed by FDA-approved research. These products are not intended to
+								diagnose, treat,
+								cure or prevent any disease. *Results are not guaranteed. The effectiveness of a particular supplement
+								depends on
+								individual body characteristics
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			//------------Form check---------------------
+			document.addEventListener('DOMContentLoaded', function() {
+				const checkbox = document.querySelector('.form__checkbox');
+				const submitButton = document.querySelector('.form__button');
+
+				submitButton.disabled = !checkbox.checked;
+
+				checkbox.addEventListener('change', function() {
+					submitButton.disabled = !checkbox.checked;
+				});
+			});
+
+			document.addEventListener('DOMContentLoaded', function() {
+				const checkbox = document.querySelector('.form__checkbox');
+				const submitButton = document.querySelector('.form__button');
+
+				submitButton.disabled = !checkbox.checked;
+
+				checkbox.addEventListener('change', function() {
+					submitButton.disabled = !checkbox.checked;
+				});
+			});
+		</script>
+		<!-- Modals -->
+
+		<div class="modal" data-modal="success-modal">
+			<div class="modal-solid success-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<img src="img/content-icons/close-modal.svg" alt="Close icon">
+				</button>
+				<div class="modal-body success-modal">
+					<div class="success-modal__content">
+						<div class="success-modal__icon">
+							<img src="img/content-icons/success.svg" alt="Success image">
+						</div>
+
+						<div class="success-modal__title heading-3">
+							<h3>
+								Your data has been sent
+							</h3>
+						</div>
+						<div class="success-modal__text text">
+							<p>
+								Thank you for choosing us! We will contact you shortly!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" data-modal="error-modal">
+			<div class="modal-solid error-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<img src="img/content-icons/close-modal.svg" alt="Close icon">
+				</button>
+				<div class="modal-body error-modal">
+					<div class="error-modal__content">
+						<div class="error-modal__icon">
+							<img src="img/content-icons/error.svg" alt="Error image">
+						</div>
+
+						<div class="error-modal__title heading-3">
+							<h3>
+								Sorry, an error occurred
+							</h3>
+						</div>
+						<div class="error-modal__text text">
+							<p>
+								Please try again!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" data-modal="apply-delete-modal">
+			<div class="modal-solid apply-delete-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<img src="img/content-icons/close-modal.svg" alt="Close icon">
+				</button>
+				<div class="modal-body apply-delete-modal">
+					<div class="apply-delete__content">
+						<div class="apply-delete__header">
+							<div class="apply-delete__title heading-3">
+								<h3>
+									Are you sure you want to remove all items from your cart?
+								</h3>
+							</div>
+							<div class="apply-delete__text text">
+								<p>
+									You will have to add all the products again.
+								</p>
+							</div>
+						</div>
+
+						<div class="apply-delete__buttons">
+							<button class="apply-delete__button red-btn">
+								Yes, Delete
+							</button>
+							<button class="apply-delete__button btn">
+								Leave items
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" data-modal="feedback-modal">
+			<div class="modal-solid feedback-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<img src="img/content-icons/close-modal.svg" alt="Close icon">
+				</button>
+				<div class="modal-body feedback-modal">
+					<div class="feedback-modal__content">
+						<div class="feedback-modal__title heading-3">
+							<h3>
+								Leave your feedback
+							</h3>
+						</div>
+
+						<form class="feedback-modal__form">
+							<div class="feedback-modal__box">
+								<input class="feedback-modal__input" type="text" name="name" placeholder="Name">
+
+								<input class="feedback-modal__input" type="text" name="mail" placeholder="Email">
+							</div>
+
+							<textarea class="feedback-modal__textarea" name="textarea" placeholder="Message"></textarea>
+
+							<div class="feedback-modal__rating">
+								<input type="radio" name="rating" id="star5" value="5">
+								<label for="star5" class="star"></label>
+								<input type="radio" name="rating" id="star4" value="4">
+								<label for="star4" class="star"></label>
+								<input type="radio" name="rating" id="star3" value="3">
+								<label for="star3" class="star"></label>
+								<input type="radio" name="rating" id="star2" value="2" checked>
+								<label for="star2" class="star"></label>
+								<input type="radio" name="rating" id="star1" value="1">
+								<label for="star1" class="star"></label>
+							</div>
+
+							<div class="feedback-modal__check">
+								<input id="feedback-modal-check" class="feedback-modal__checkbox" type="checkbox" name="check">
+								<label for="feedback-modal-check" class="feedback-modal__warning">
+									<span>
+										I consent to the processing of <a href="#" target="_blank">personal data</a>
+									</span>
+								</label>
+							</div>
+
+							<button type="submit" class="feedback-modal__button btn">
+								Send mail
+							</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="product-popup" class="add-to-cart-popup">
+			<div class="add-to-cart-popup__body">
+				<div class="add-to-cart-popup__image">
+					<img src="img/product/product-1.webp" alt="Image">
+				</div>
+				<div class="add-to-cart-popup__content">
+					<div class="add-to-cart-popup__wrap">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#basket"></use>
+						</svg>
+						Added to cart
+					</div>
+					<div class="add-to-cart-popup__title">
+						Neuriva Brain Health Strawberry Plus Gummies...
+					</div>
+					<div class="add-to-cart-popup__gummy">
+						50 gummies
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="cookie-popup" class="cookie-popup">
+			<div class="cookie-popup__content">
+				<div class="cookie-popup__text">
+					<p>By using this website, you agree to the processing of <a href="#">cookie files</a>.</p>
+				</div>
+				<button id="agree-btn" class="cookie-popup__button btn">
+					AGREE
+				</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240918120358"></script>
+</body>
+
+</html>

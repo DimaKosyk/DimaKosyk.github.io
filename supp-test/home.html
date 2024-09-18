@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240918120358">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--Swiper JS-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240918120358" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240918120358" async></script>
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+
+					<a href="home.html" class="header__logo">
+						Supplenation
+					</a>
+
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu" data-da=".header__rightside, 991.98"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list" id="menu">
+								<li class="menu__drop-down">
+									<a href="#" class="menu-link__drop-down">
+										Catalog
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</a>
+									<div class="menu__submenu submenu-uniq">
+										<ul>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-1.svg" alt="Brain icon">
+													</div>
+													Memory Supplements
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-2.svg" alt="Eye icon">
+													</div>
+													Eye Vitamins
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-3.svg" alt="Weight icon">
+													</div>
+													Weight Loss Supplements
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-4.svg" alt="Brain icon">
+													</div>
+													Brain Supplements
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Products</a></li>
+								<li class="menu__drop-down menu__drop-down--simple">
+									<a href="#" class="menu-link__drop-down">
+										Brands
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</a>
+									<div class="menu__submenu submenu-simple">
+										<ul>
+											<li><a href="#">For the eyes</a></li>
+											<li><a href="#">For memory</a></li>
+											<li><a href="#">For the brain</a></li>
+											<li><a href="#">Weight loss</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">Contacts</a></li>
+							</ul>
+							<ul class="menu__socials">
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tik-tok"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="header__rightside">
+						<a href="#" class="header__get" data-da=".menu__body, 991.98">
+							get in touch
+						</a>
+						<button class="header__basket">
+							<img src="img/content-icons/basket.svg" alt="Basket icon">
+							<span>1</span>
+						</button>
+					</div>
+
+				</div>
+			</div>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const menuLinks = document.querySelectorAll('.menu-link__drop-down');
+
+					menuLinks.forEach(link => {
+						link.addEventListener('click', function(event) {
+							event.preventDefault();
+
+							const parentItem = this.parentNode;
+							const isActive = parentItem.classList.contains('drop-down');
+
+							document.querySelectorAll('.menu__drop-down').forEach(item => {
+								item.classList.remove('drop-down');
+							});
+
+							if (!isActive) {
+								parentItem.classList.add('drop-down');
+							}
+						});
+					});
+
+					document.addEventListener('click', function(event) {
+						const target = event.target;
+
+						if (!target.closest('#menu')) {
+							document.querySelectorAll('.menu__item').forEach(item => {
+								item.classList.remove('drop-down');
+							});
+						}
+					});
+				});
+			</script>
+		</header>
+		<main class="page">
+
+			<section class="hero section-pb">
+				<div class="hero__container">
+					<div class="hero__body">
+						<div class="hero__slider swiper">
+							<div class="hero__wrapper swiper-wrapper">
+								<div class="hero__slide swiper-slide">
+									<img class="hero__image" src="img/main/hero-1.webp" alt="Image">
+								</div>
+
+								<div class="hero__slide swiper-slide">
+									<div class="hero__content">
+										<div class="hero__rate rate-shop">
+											<div class="rate-shop__item">
+												<img src="img/main/trustpilot.svg" alt="Trustpilot image">
+												<img src="img/main/star.svg" alt="Star icon">
+												<span>4.9</span>
+											</div>
+											<div class="rate-shop__item">
+												<img src="img/main/google.svg" alt="Trustpilot image">
+												<img src="img/main/star.svg" alt="Star icon">
+												<span>4.9</span>
+											</div>
+										</div>
+
+										<div class="hero__title">
+											<h1>
+												A holistic approach to your well-being with our products.
+											</h1>
+										</div>
+
+										<div class="hero__text">
+											<p>
+												Boost brain functions, sharpen vision, fortify immunity, and support your heart, bones, joints, and
+												digestive system.
+												Why settle for less? Elevate your well-being today.
+											</p>
+										</div>
+
+										<a href="#" class="hero__link btn btn--white">
+											Shop now
+										</a>
+
+										<div class="hero__items">
+											<div class="hero__item">
+												<img src="img/content-icons/gras.svg" alt="Grass icon">
+												Organic ingredients
+											</div>
+											<div class="hero__item">
+												<img src="img/content-icons/microscope.svg" alt="Microscope icon">
+												Verified by scientists
+											</div>
+											<div class="hero__item">
+												<img src="img/content-icons/star.svg" alt="Star icon">
+												Over 5000 positive reviews
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="hero__slide swiper-slide">
+									<img class="hero__image" src="img/main/hero-2.webp" alt="Image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+						const heroSwiper = new Swiper('.hero__slider', {
+							observer: true,
+							observeParents: true,
+							lazy: true,
+							slidesPerView: 1.01,
+							centeredSlides: true,
+							initialSlide: 1,
+							spaceBetween: 10,
+							speed: 800,
+
+							breakpoints: {
+								410: {
+									slidesPerView: 1.1,
+								},
+								450: {
+									slidesPerView: 1.2,
+								},
+								550: {
+									slidesPerView: 1.4,
+								},
+								650: {
+									slidesPerView: 1.7,
+								},
+								770: {
+									slidesPerView: 2,
+								},
+								880: {
+									slidesPerView: 2.3,
+								},
+								991: {
+									slidesPerView: 2.5,
+								},
+								1280: {
+									slidesPerView: 2.8,
+									spaceBetween: 20,
+									centeredSlides: true,
+								},
+								1480: {
+									slidesPerView: 3,
+									spaceBetween: 20,
+									centeredSlides: false,
+								}
+							},
+							on: {
+								init: function() {
+									document.querySelector('.swiper').style.visibility = 'visible';
+								},
+							},
+						});
+					});
+				</script>
+			</section>
+
+			<section class="dive section-pb">
+				<div class="dive__body">
+
+					<div class="dive__content">
+						<div class="dive__image">
+							<img src="img/main/dive/pillows-1.webp" alt="Image">
+						</div>
+
+						<div class="dive__info">
+							<div class="dive__title">
+								Dive into a life of clarity, energy, and balance with our tailored supplements.
+							</div>
+
+							<div class="dive__text text">
+								<p>
+									Boost brain functions, sharpen vision, fortify immunity, and support your heart, bones, joints, and
+									digestive system.
+									Why settle for less? Elevate your well-being today.
+								</p>
+							</div>
+
+							<a href="#" class="dive__link">
+								learn more
+							</a>
+
+							<div class="dive__description">
+								information about certifications
+							</div>
+						</div>
+
+						<div class="dive__image">
+							<img src="img/main/dive/pillows-2.webp" alt="Image">
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="categories section-pb">
+				<div class="categories__container">
+					<div class="categories__body">
+						<div class="categories__header">
+							<div class="categories__title heading-2">
+								<h2>
+									Product categories
+								</h2>
+							</div>
+						</div>
+
+						<div class="categories__content">
+							<div class="categories__items">
+								<div class="categories__item item-categories">
+									<div class="item-categories__info">
+										<div class="item-categories__title heading-4">
+											<h4>Memory Supplements</h4>
+										</div>
+										<a href="#" class="item-categories__link">
+											go to products
+										</a>
+									</div>
+									<div class="item-categories__image">
+										<img src="img/main/categories-1.webp" alt="Image">
+									</div>
+								</div>
+
+								<div class="categories__item categories__item--blue item-categories">
+									<div class="item-categories__info">
+										<div class="item-categories__title heading-4">
+											<h4>Brain Supplements</h4>
+										</div>
+										<a href="#" class="item-categories__link">
+											go to products
+										</a>
+									</div>
+									<div class="item-categories__image">
+										<img src="img/main/categories-2.webp" alt="Image">
+									</div>
+								</div>
+
+								<div class="categories__item item-categories">
+									<div class="item-categories__info">
+										<div class="item-categories__title heading-4">
+											<h4>Eye Vitamins</h4>
+										</div>
+										<a href="#" class="item-categories__link">
+											go to products
+										</a>
+									</div>
+									<div class="item-categories__image">
+										<img src="img/main/categories-3.webp" alt="Image">
+									</div>
+								</div>
+
+								<div class="categories__item item-categories">
+									<div class="item-categories__info">
+										<div class="item-categories__title heading-4">
+											<h4>Weight Loss Supplements</h4>
+										</div>
+										<a href="#" class="item-categories__link">
+											go to products
+										</a>
+									</div>
+									<div class="item-categories__image">
+										<img src="img/main/categories-4.webp" alt="Image">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="popular section-pb">
+				<div class="popular__container">
+					<div class="popular__body">
+
+						<div class="popular__header">
+							<div class="popular__title heading-2">
+								<h2>
+									Popular Products
+								</h2>
+							</div>
+
+							<div class="popular__navigation navigation">
+								<button type="button" class="popular-prev navigation-prev">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#slider-arrow"></use>
+									</svg>
+								</button>
+								<button type="button" class="popular-next navigation-next">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#slider-arrow"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<div class="popular__content">
+							<div class="popular__slider swiper">
+								<div class="popular__wrapper swiper-wrapper">
+
+									<div class="popular__slide swiper-slide">
+										<div class="product-card">
+											<div class="product-card__body">
+												<a href="#" class="product-card__image">
+													<img src="img/product/product-1.webp" alt="Product image">
+													<div class="product-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="product-card__content">
+													<div class="product-card__rating">
+														<ul class="product-card__stars">
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-gray.svg" alt="Star">
+															</li>
+														</ul>
+
+														<div class="product-card__rate">
+															4.0
+														</div>
+
+														<div class="product-card__rewievs">
+															(<span>245</span> Reviews)
+														</div>
+													</div>
+
+													<a href="#" class="product-card__title">
+														Neuriva Brain Health Strawberry Plus Gummies...
+													</a>
+
+													<div class="product-card__prices">
+														<div class="product-card__new-price">$50.00</div>
+														<div class="product-card__old-price">$50.00</div>
+													</div>
+
+													<div class="product-card__nav">
+														<a href="#" class="product-card__link btn">
+															buy Now
+														</a>
+														<button class="product-card__basket basket basket--full">
+															<svg>
+																<use xlink:href="img/icons/icons.svg#basket"></use>
+															</svg>
+															<span>1</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="popular__slide swiper-slide">
+										<div class="product-card">
+											<div class="product-card__body">
+												<a href="#" class="product-card__image">
+													<img src="img/product/product-2.webp" alt="Product image">
+													<div class="product-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="product-card__content">
+													<div class="product-card__rating">
+														<ul class="product-card__stars">
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-gray.svg" alt="Star">
+															</li>
+														</ul>
+
+														<div class="product-card__rate">
+															4.0
+														</div>
+
+														<div class="product-card__rewievs">
+															(<span>245</span> Reviews)
+														</div>
+													</div>
+
+													<a href="#" class="product-card__title">
+														Neuriva Brain Health Strawberry Plus Gummies...
+													</a>
+
+													<div class="product-card__prices">
+														<div class="product-card__new-price">$50.00</div>
+														<div class="product-card__old-price">$50.00</div>
+													</div>
+
+													<div class="product-card__nav">
+														<a href="#" class="product-card__link btn">
+															buy Now
+														</a>
+														<button class="product-card__basket basket basket--free">
+															<svg>
+																<use xlink:href="img/icons/icons.svg#basket"></use>
+															</svg>
+															<span>+</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="popular__slide swiper-slide">
+										<div class="product-card">
+											<div class="product-card__body">
+												<a href="#" class="product-card__image">
+													<img src="img/product/product-3.webp" alt="Product image">
+													<div class="product-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="product-card__content">
+													<div class="product-card__rating">
+														<ul class="product-card__stars">
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-gray.svg" alt="Star">
+															</li>
+														</ul>
+
+														<div class="product-card__rate">
+															4.0
+														</div>
+
+														<div class="product-card__rewievs">
+															(<span>245</span> Reviews)
+														</div>
+													</div>
+
+													<a href="#" class="product-card__title">
+														Neuriva Brain Health Strawberry Plus Gummies...
+													</a>
+
+													<div class="product-card__prices">
+														<div class="product-card__new-price">$50.00</div>
+														<div class="product-card__old-price">$50.00</div>
+													</div>
+
+													<div class="product-card__nav">
+														<a href="#" class="product-card__link btn">
+															buy Now
+														</a>
+														<button class="product-card__basket basket basket--free">
+															<svg>
+																<use xlink:href="img/icons/icons.svg#basket"></use>
+															</svg>
+															<span>+</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="popular__slide swiper-slide">
+										<div class="product-card">
+											<div class="product-card__body">
+												<a href="#" class="product-card__image">
+													<img src="img/product/product-4.webp" alt="Product image">
+													<div class="product-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="product-card__content">
+													<div class="product-card__rating">
+														<ul class="product-card__stars">
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-gray.svg" alt="Star">
+															</li>
+														</ul>
+
+														<div class="product-card__rate">
+															4.0
+														</div>
+
+														<div class="product-card__rewievs">
+															(<span>245</span> Reviews)
+														</div>
+													</div>
+
+													<a href="#" class="product-card__title">
+														Neuriva Brain Health Strawberry Plus Gummies...
+													</a>
+
+													<div class="product-card__prices">
+														<div class="product-card__new-price">$50.00</div>
+														<div class="product-card__old-price">$50.00</div>
+													</div>
+
+													<div class="product-card__nav">
+														<a href="#" class="product-card__link btn">
+															buy Now
+														</a>
+														<button class="product-card__basket basket basket--free">
+															<svg>
+																<use xlink:href="img/icons/icons.svg#basket"></use>
+															</svg>
+															<span>+</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="popular__slide swiper-slide">
+										<div class="product-card">
+											<div class="product-card__body">
+												<a href="#" class="product-card__image">
+													<img src="img/product/product-1.webp" alt="Product image">
+													<div class="product-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="product-card__content">
+													<div class="product-card__rating">
+														<ul class="product-card__stars">
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-gray.svg" alt="Star">
+															</li>
+														</ul>
+
+														<div class="product-card__rate">
+															4.0
+														</div>
+
+														<div class="product-card__rewievs">
+															(<span>245</span> Reviews)
+														</div>
+													</div>
+
+													<a href="#" class="product-card__title">
+														Neuriva Brain Health Strawberry Plus Gummies...
+													</a>
+
+													<div class="product-card__prices">
+														<div class="product-card__new-price">$50.00</div>
+														<div class="product-card__old-price">$50.00</div>
+													</div>
+
+													<div class="product-card__nav">
+														<a href="#" class="product-card__link btn">
+															buy Now
+														</a>
+														<button class="product-card__basket basket basket--free">
+															<svg>
+																<use xlink:href="img/icons/icons.svg#basket"></use>
+															</svg>
+															<span>+</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="popular__slide swiper-slide">
+										<div class="product-card">
+											<div class="product-card__body">
+												<a href="#" class="product-card__image">
+													<img src="img/product/product-2.webp" alt="Product image">
+													<div class="product-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="product-card__content">
+													<div class="product-card__rating">
+														<ul class="product-card__stars">
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-blue.svg" alt="Star">
+															</li>
+															<li>
+																<img src="img/content-icons/star-gray.svg" alt="Star">
+															</li>
+														</ul>
+
+														<div class="product-card__rate">
+															4.0
+														</div>
+
+														<div class="product-card__rewievs">
+															(<span>245</span> Reviews)
+														</div>
+													</div>
+
+													<a href="#" class="product-card__title">
+														Neuriva Brain Health Strawberry Plus Gummies...
+													</a>
+
+													<div class="product-card__prices">
+														<div class="product-card__new-price">$50.00</div>
+														<div class="product-card__old-price">$50.00</div>
+													</div>
+
+													<div class="product-card__nav">
+														<a href="#" class="product-card__link btn">
+															buy Now
+														</a>
+														<button class="product-card__basket basket basket--free">
+															<svg>
+																<use xlink:href="img/icons/icons.svg#basket"></use>
+															</svg>
+															<span>+</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+						const popularSwiper = new Swiper('.popular__slider', {
+							observer: true,
+							observeParents: true,
+							slidesPerView: 1.6,
+							spaceBetween: 15,
+							speed: 800,
+
+							navigation: {
+								prevEl: '.popular-prev',
+								nextEl: '.popular-next',
+							},
+
+							breakpoints: {
+								600: {
+									slidesPerView: 2,
+									spaceBetween: 15,
+								},
+								767: {
+									slidesPerView: 3,
+									spaceBetween: 15,
+								},
+								1200: {
+									slidesPerView: 4,
+									spaceBetween: 20,
+								}
+							}
+						});
+					});
+				</script>
+			</section>
+
+			<section class="life section-pb">
+				<div class="life__container">
+					<div class="life__body">
+
+						<div class="life__content">
+							<div class="life__title heading-2">
+								<h2>
+									Dive into a life of clarity, energy, and balance with supplements.
+								</h2>
+							</div>
+							<div class="life__text text">
+								<p>
+									Boost brain functions, sharpen vision, fortify immunity, and support your heart, bones, joints, and
+									digestive system.
+									Why settle for less? Elevate your well-being today.
+								</p>
+							</div>
+
+							<a href="#" class="life__link btn">
+								learn more
+							</a>
+						</div>
+
+						<div class="life__image">
+							<img src="img/main/life.webp" alt="Family image">
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="science section-pb">
+				<div class="science__body">
+					<div class="science__top">
+						<div class="science__container">
+
+							<div class="science__top-content">
+
+								<div class="science__header">
+									<div class="science__title heading-2">
+										<h2>
+											Science confirms: your health can improve with the right supplements!
+										</h2>
+									</div>
+
+									<div class="science__text text">
+										<p>
+											Boost brain functions, sharpen vision, fortify immunity, and support your heart, bones, joints, and
+											digestive system.
+											Why settle for less? Elevate your well-being today.
+										</p>
+									</div>
+								</div>
+
+								<div class="science__graphs">
+									<div class="science__tag">
+										Percentage of Improvements Among Supplement Users
+									</div>
+
+									<div class="science__lines">
+										<div class="science__line">
+											<div class="science__persent">
+												80%
+											</div>
+
+											<div class="science__progress-bar">
+												<div class="science__first-layer" style="width: 80%;">
+													<div class="science__name">
+														Memory Enhancement
+													</div>
+												</div>
+												<div class="science__second-layer">
+													<div class="science__name">
+														Memory Enhancement
+													</div>
+												</div>
+
+												<div class="science__circle" style="left: 80%;"></div>
+											</div>
+										</div>
+
+										<div class="science__line">
+											<div class="science__persent">
+												70%
+											</div>
+
+											<div class="science__progress-bar">
+												<div class="science__first-layer" style="width: 70%;">
+													<div class="science__name">
+														Vision Support
+													</div>
+												</div>
+												<div class="science__second-layer">
+													<div class="science__name">
+														Vision Support
+													</div>
+												</div>
+
+												<div class="science__circle" style="left: 70%;"></div>
+											</div>
+										</div>
+
+										<div class="science__line">
+											<div class="science__persent">
+												95%
+											</div>
+
+											<div class="science__progress-bar">
+												<div class="science__first-layer" style="width: 95%;">
+													<div class="science__name">
+														Immune Boost
+													</div>
+												</div>
+												<div class="science__second-layer">
+													<div class="science__name">
+														Immune Boost
+													</div>
+												</div>
+
+												<div class="science__circle" style="left: 95%;"></div>
+											</div>
+										</div>
+
+										<div class="science__line">
+											<div class="science__persent">
+												65%
+											</div>
+
+											<div class="science__progress-bar">
+												<div class="science__first-layer" style="width: 65%;">
+													<div class="science__name">
+														Brain Function
+													</div>
+												</div>
+												<div class="science__second-layer">
+													<div class="science__name">
+														Brain Function
+													</div>
+												</div>
+
+												<div class="science__circle" style="left: 65%;"></div>
+											</div>
+										</div>
+
+										<div class="science__line">
+											<div class="science__persent">
+												70%
+											</div>
+
+											<div class="science__progress-bar">
+												<div class="science__first-layer" style="width: 70%;">
+													<div class="science__name">
+														Heart Health
+													</div>
+												</div>
+												<div class="science__second-layer">
+													<div class="science__name">
+														Heart Health
+													</div>
+												</div>
+
+												<div class="science__circle" style="left: 70%;"></div>
+											</div>
+										</div>
+
+										<div class="science__line">
+											<div class="science__persent">
+												80%
+											</div>
+
+											<div class="science__progress-bar">
+												<div class="science__first-layer" style="width: 80%;">
+													<div class="science__name">
+														For brains
+													</div>
+												</div>
+												<div class="science__second-layer">
+													<div class="science__name">
+														For brains
+													</div>
+												</div>
+
+												<div class="science__circle" style="left: 80%;"></div>
+											</div>
+										</div>
+
+										<div class="science__line">
+											<div class="science__persent">
+												95%
+											</div>
+
+											<div class="science__progress-bar">
+												<div class="science__first-layer" style="width: 95%;">
+													<div class="science__name">
+														Probiotics
+													</div>
+												</div>
+												<div class="science__second-layer">
+													<div class="science__name">
+														Probiotics
+													</div>
+												</div>
+
+												<div class="science__circle" style="left: 95%;"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="science__content content-science">
+						<div class="content-science__body">
+							<div class="content-science__image">
+								<img src="img/main/science.webp" alt="Woman image">
+							</div>
+
+							<div class="content-science__info">
+								<div class="content-science__title heading-2">
+									<h2>
+										Dive into a life of clarity Dive into a life of clarity
+									</h2>
+								</div>
+
+								<div class="content-science__items">
+									<div class="content-science__item item-science">
+										<div class="item-science__icons">
+											<img src="img/main/feedback/item-1.webp" alt="Image">
+											<img src="img/main/feedback/item-2.webp" alt="Image">
+										</div>
+
+										<div class="item-science__title heading-6">
+											<h6>
+												Developing formulas with doctors
+											</h6>
+										</div>
+
+										<div class="item-science__text text">
+											<p>
+												Listen and read in the new language to get used to its sounds, intonations, and structures. Podcasts,
+												movies, and books
+												help.
+											</p>
+										</div>
+									</div>
+
+									<div class="content-science__item item-science">
+										<div class="item-science__icons">
+											<img src="img/main/science/item-1.webp" alt="Image">
+											<img src="img/main/science/item-2.webp" alt="Image">
+										</div>
+
+										<div class="item-science__title heading-6">
+											<h6>
+												International standards
+											</h6>
+										</div>
+
+										<div class="item-science__text text">
+											<p>
+												Listen and read in the new language to get used to its sounds, intonations, and structures. Podcasts,
+												movies, and
+												books
+												help.
+											</p>
+										</div>
+									</div>
+
+									<div class="content-science__item item-science">
+										<div class="item-science__icons">
+											<img src="img/main/science/item-3.svg" alt="Image">
+											<img src="img/main/science/item-4.svg" alt="Image">
+										</div>
+
+										<div class="item-science__title heading-6">
+											<h6>
+												Successful product testing
+											</h6>
+										</div>
+
+										<div class="item-science__text text">
+											<p>
+												Listen and read in the new language to get used to its sounds, intonations, and structures. Podcasts,
+												movies, and
+												books
+												help.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="service section-pb">
+				<div class="service__container">
+					<div class="service__body">
+
+						<div class="service__header">
+							<div class="service__subtitle heading-5">
+								<h5>
+									With care for you
+								</h5>
+							</div>
+							<div class="service__title heading-2">
+								<h2>
+									Great service
+								</h2>
+							</div>
+						</div>
+
+						<div class="service__content">
+							<div class="service__items">
+								<div class="service__item item-service">
+									<div class="item-service__icon">
+										<img src="img/main/service/icon-1.svg" alt="Icon">
+									</div>
+									<div class="item-service__title">
+										Free fast delivery
+									</div>
+									<div class="item-service__text text">
+										<p>
+											Listen and read in the new language to get used to its sounds, intonations, and structures. Podcasts,
+											movies, and books
+											help.
+										</p>
+									</div>
+								</div>
+
+								<div class="service__item item-service">
+									<div class="item-service__icon">
+										<img src="img/main/service/icon-2.svg" alt="Icon">
+									</div>
+									<div class="item-service__title">
+										Live support
+									</div>
+									<div class="item-service__text text">
+										<p>
+											Listen and read in the new language to get used to its sounds, intonations, and structures. Podcasts,
+											movies, and books
+											help.
+										</p>
+									</div>
+								</div>
+
+								<div class="service__item item-service">
+									<div class="item-service__icon">
+										<img src="img/main/service/icon-3.svg" alt="Icon">
+									</div>
+									<div class="item-service__title">
+										Secure payments
+									</div>
+									<div class="item-service__text text">
+										<p>
+											Listen and read in the new language to get used to its sounds, intonations, and structures. Podcasts,
+											movies, and books
+											help.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="choose section-pb">
+				<div class="choose__body">
+					<div class="choose__container">
+						<div class="choose__content">
+
+							<div class="choose__header">
+								<div class="choose__title heading-2">
+									<h2>
+										Choose your product
+									</h2>
+								</div>
+							</div>
+
+							<div class="choose__items">
+								<div class="choose__item">
+									<div class="choose-card">
+										<div class="choose-card__body">
+											<div class="choose-card__rating">
+												<ul class="choose-card__stars">
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-gray.svg" alt="Star">
+													</li>
+												</ul>
+
+												<div class="choose-card__rate">
+													4.0
+												</div>
+
+												<div class="choose-card__rewievs">
+													(<span>245</span> Reviews)
+												</div>
+											</div>
+
+											<a href="#" class="choose-card__title heading-5">
+												<h5>
+													Neuriva Brain Health Strawberry Plus Gummies...
+												</h5>
+											</a>
+
+											<div class="choose-card__wrap">
+												<a href="#" class="choose-card__image">
+													<img src="img/product/product-1.webp" alt="Product image">
+													<div class="choose-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="choose-card__quantity">
+													<div class="choose-card__count">
+														3x Product
+													</div>
+													<div class="choose-card__prices">
+														<div class="choose-card__new-price">$50.00</div>
+														<div class="choose-card__old-price">$50.00</div>
+													</div>
+												</div>
+											</div>
+
+											<a href="#" class="choose-card__link btn">
+												buy Now
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="choose__item">
+									<div class="choose-card">
+										<div class="choose-card__body">
+											<div class="choose-card__rating">
+												<ul class="choose-card__stars">
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-gray.svg" alt="Star">
+													</li>
+												</ul>
+
+												<div class="choose-card__rate">
+													4.0
+												</div>
+
+												<div class="choose-card__rewievs">
+													(<span>245</span> Reviews)
+												</div>
+											</div>
+
+											<a href="#" class="choose-card__title heading-5">
+												<h5>
+													Neuriva Brain Health Strawberry Plus Gummies...
+												</h5>
+											</a>
+
+											<div class="choose-card__wrap">
+												<a href="#" class="choose-card__image">
+													<img src="img/product/product-1.webp" alt="Product image">
+													<div class="choose-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="choose-card__quantity">
+													<div class="choose-card__count">
+														3x Product
+													</div>
+													<div class="choose-card__prices">
+														<div class="choose-card__new-price">$50.00</div>
+														<div class="choose-card__old-price">$50.00</div>
+													</div>
+												</div>
+											</div>
+
+											<a href="#" class="choose-card__link btn">
+												buy Now
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="choose__item">
+									<div class="choose-card">
+										<div class="choose-card__body">
+											<div class="choose-card__rating">
+												<ul class="choose-card__stars">
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-blue.svg" alt="Star">
+													</li>
+													<li>
+														<img src="img/content-icons/star-gray.svg" alt="Star">
+													</li>
+												</ul>
+
+												<div class="choose-card__rate">
+													4.0
+												</div>
+
+												<div class="choose-card__rewievs">
+													(<span>245</span> Reviews)
+												</div>
+											</div>
+
+											<a href="#" class="choose-card__title heading-5">
+												<h5>
+													Neuriva Brain Health Strawberry Plus Gummies...
+												</h5>
+											</a>
+
+											<div class="choose-card__wrap">
+												<a href="#" class="choose-card__image">
+													<img src="img/product/product-1.webp" alt="Product image">
+													<div class="choose-card__tag">
+														Sale
+													</div>
+												</a>
+
+												<div class="choose-card__quantity">
+													<div class="choose-card__count">
+														3x Product
+													</div>
+													<div class="choose-card__prices">
+														<div class="choose-card__new-price">$50.00</div>
+														<div class="choose-card__old-price">$50.00</div>
+													</div>
+												</div>
+											</div>
+
+											<a href="#" class="choose-card__link btn">
+												buy Now
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="choose__description">
+								<span>In stock.</span> Order in the next <span>5h 43m 33s</span> and the product will be with you on
+								<span>Monday 25 September</span>
+							</div>
+
+							<div class="choose__money-back money-back">
+								<div class="money-back__wrap">
+									<div class="money-back__image">
+										<img src="img/main/money-back.svg" alt="Image">
+									</div>
+									<div class="money-back__title money-back__title--mobile">
+										14-day money-back guarantee
+									</div>
+								</div>
+
+								<div class="money-back__content">
+									<div class="money-back__title money-back__title--pc">
+										14-day money-back guarantee
+									</div>
+
+									<div class="money-back__text text">
+										<p>
+											If you are not satisfied with the product, simply return it and we will refund your money.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="choose__rate rate-shop">
+								<div class="rate-shop__item">
+									<img src="img/main/trustpilot.svg" alt="Trustpilot image">
+									<img src="img/main/star.svg" alt="Star icon">
+									<span>4.9</span>
+								</div>
+								<div class="rate-shop__item">
+									<img src="img/main/google.svg" alt="Trustpilot image">
+									<img src="img/main/star.svg" alt="Star icon">
+									<span>4.9</span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="feedback section-pb">
+				<div class="feedback__container">
+					<div class="feedback__body">
+
+						<div class="feedback__header">
+							<div class="feedback__title heading-2">
+								<h2>
+									Customer feedback
+								</h2>
+							</div>
+
+							<div class="feedback__navigation navigation">
+								<button type="button" class="feedback-prev navigation-prev">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#slider-arrow"></use>
+									</svg>
+								</button>
+								<button type="button" class="feedback-next navigation-next">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#slider-arrow"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<div class="feedback__content">
+
+							<div class="feedback__slider swiper">
+								<div class="feedback__wrapper swiper-wrapper">
+
+									<div class="feedback__slide swiper-slide">
+										<div class="feedback-card">
+											<div class="feedback-card__header">
+												<div class="feedback-card__image">
+													<img src="img/main/feedback/item-1.webp" alt="User photo">
+												</div>
+												<div class="feedback-card__name">
+													Irina Petrivna
+												</div>
+											</div>
+
+											<div class="feedback-card__comment">
+												«Feeling more energy and stronger hair»
+											</div>
+
+											<div class="feedback-card__text text">
+												<p>
+													I have been taking vitamins for a month now, and my hair has noticeably become stronger. I feel
+													better, with more
+													energy. However, the price is a bit high for regular use.
+												</p>
+											</div>
+
+										</div>
+									</div>
+
+									<div class="feedback__slide swiper-slide">
+										<div class="feedback-card">
+											<div class="feedback-card__header">
+												<div class="feedback-card__image">
+													<img src="img/main/feedback/item-2.webp" alt="User photo">
+												</div>
+												<div class="feedback-card__name">
+													Irina Petrivna
+												</div>
+											</div>
+
+											<div class="feedback-card__comment">
+												«I sleep more soundly and wake up refreshed»
+											</div>
+
+											<div class="feedback-card__text text">
+												<p>
+													Tried sleep supplements for better sleep, and the effect was positive. I sleep more soundly and wake
+													up refreshed. The
+													only downside is the unpleasant taste of the capsules.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="feedback__slide swiper-slide">
+										<div class="feedback-card">
+											<div class="feedback-card__header">
+												<div class="feedback-card__image">
+													<img src="img/main/feedback/item-3.webp" alt="User photo">
+												</div>
+												<div class="feedback-card__name">
+													Irina Petrivna
+												</div>
+											</div>
+
+											<div class="feedback-card__comment">
+												«Restored vitamin balance after winter»
+											</div>
+
+											<div class="feedback-card__text text">
+												<p>
+													These supplements helped me restore the balance of vitamins after winter. I stopped having
+													headaches, and the fatigue
+													disappeared. But it's important to monitor the dosage to avoid side effects.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="feedback__slide swiper-slide">
+										<div class="feedback-card">
+											<div class="feedback-card__header">
+												<div class="feedback-card__image">
+													<img src="img/main/feedback/item-1.webp" alt="User photo">
+												</div>
+												<div class="feedback-card__name">
+													Irina Petrivna
+												</div>
+											</div>
+
+											<div class="feedback-card__comment">
+												«Feeling more energy and stronger hair»
+											</div>
+
+											<div class="feedback-card__text text">
+												<p>
+													I have been taking vitamins for a month now, and my hair has noticeably become stronger. I feel
+													better, with more
+													energy. However, the price is a bit high for regular use.
+												</p>
+											</div>
+
+										</div>
+									</div>
+
+									<div class="feedback__slide swiper-slide">
+										<div class="feedback-card">
+											<div class="feedback-card__header">
+												<div class="feedback-card__image">
+													<img src="img/main/feedback/item-2.webp" alt="User photo">
+												</div>
+												<div class="feedback-card__name">
+													Irina Petrivna
+												</div>
+											</div>
+
+											<div class="feedback-card__comment">
+												«I sleep more soundly and wake up refreshed»
+											</div>
+
+											<div class="feedback-card__text text">
+												<p>
+													Tried sleep supplements for better sleep, and the effect was positive. I sleep more soundly and wake
+													up refreshed. The
+													only downside is the unpleasant taste of the capsules.
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="feedback__slide swiper-slide">
+										<div class="feedback-card">
+											<div class="feedback-card__header">
+												<div class="feedback-card__image">
+													<img src="img/main/feedback/item-3.webp" alt="User photo">
+												</div>
+												<div class="feedback-card__name">
+													Irina Petrivna
+												</div>
+											</div>
+
+											<div class="feedback-card__comment">
+												«Restored vitamin balance after winter»
+											</div>
+
+											<div class="feedback-card__text text">
+												<p>
+													These supplements helped me restore the balance of vitamins after winter. I stopped having
+													headaches, and the
+													fatigue
+													disappeared. But it's important to monitor the dosage to avoid side effects.
+												</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+						const feedbackSwiper = new Swiper('.feedback__slider', {
+							observer: true,
+							observeParents: true,
+							slidesPerView: 1.15,
+							spaceBetween: 15,
+							speed: 800,
+
+							navigation: {
+								prevEl: '.feedback-prev',
+								nextEl: '.feedback-next',
+							},
+
+							breakpoints: {
+								467: {
+									slidesPerView: 1.5,
+									spaceBetween: 15,
+								},
+								767: {
+									slidesPerView: 2,
+									spaceBetween: 15,
+								},
+								991: {
+									slidesPerView: 3,
+									spaceBetween: 20,
+								}
+							}
+						});
+					});
+				</script>
+			</section>
+
+			<section class="blog section-pb">
+				<div class="blog__container">
+					<div class="blog__body">
+
+						<div class="blog__header">
+							<div class="blog__title heading-2">
+								<h2>
+									Blog
+								</h2>
+							</div>
+
+							<div class="blog__navigation navigation">
+								<button type="button" class="blog-prev navigation-prev">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#slider-arrow"></use>
+									</svg>
+								</button>
+								<button type="button" class="blog-next navigation-next">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#slider-arrow"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<div class="blog__content">
+
+							<div class="blog__slider swiper">
+								<div class="blog__wrapper swiper-wrapper">
+
+									<div class="blog__slide swiper-slide">
+										<div class="blog-item">
+											<img src="img/main/blog/blog-1.webp" alt="Blog image">
+
+											<div class="blog-item__content">
+												<div class="blog-item__date">
+													20.12.2023
+												</div>
+												<div class="blog-item__title heading-6">
+													<h6>
+														Approved program for transitioning to our hydro dismantling asda adsa...
+													</h6>
+												</div>
+												<a href="#" class="blog-item__link btn btn--white">
+													Read more
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="blog__slide swiper-slide">
+										<div class="blog-item">
+											<img src="img/main/blog/blog-2.webp" alt="Blog image">
+
+											<div class="blog-item__content">
+												<div class="blog-item__date">
+													20.12.2023
+												</div>
+												<div class="blog-item__title heading-6">
+													<h6>
+														Approved program for transitioning to our hydro dismantling asda adsa...
+													</h6>
+												</div>
+												<a href="#" class="blog-item__link btn btn--white">
+													Read more
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="blog__slide swiper-slide">
+										<div class="blog-item">
+											<img src="img/main/blog/blog-3.webp" alt="Blog image">
+
+											<div class="blog-item__content">
+												<div class="blog-item__date">
+													20.12.2023
+												</div>
+												<div class="blog-item__title heading-6">
+													<h6>
+														Approved program for transitioning to our hydro dismantling asda adsa...
+													</h6>
+												</div>
+												<a href="#" class="blog-item__link btn btn--white">
+													Read more
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="blog__slide swiper-slide">
+										<div class="blog-item">
+											<img src="img/main/blog/blog-4.webp" alt="Blog image">
+
+											<div class="blog-item__content">
+												<div class="blog-item__date">
+													20.12.2023
+												</div>
+												<div class="blog-item__title heading-6">
+													<h6>
+														Approved program for transitioning to our hydro dismantling asda adsa...
+													</h6>
+												</div>
+												<a href="#" class="blog-item__link btn btn--white">
+													Read more
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="blog__slide swiper-slide">
+										<div class="blog-item">
+											<img src="img/main/blog/blog-1.webp" alt="Blog image">
+
+											<div class="blog-item__content">
+												<div class="blog-item__date">
+													20.12.2023
+												</div>
+												<div class="blog-item__title heading-6">
+													<h6>
+														Approved program for transitioning to our hydro dismantling asda adsa...
+													</h6>
+												</div>
+												<a href="#" class="blog-item__link btn btn--white">
+													Read more
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="blog__slide swiper-slide">
+										<div class="blog-item">
+											<img src="img/main/blog/blog-2.webp" alt="Blog image">
+
+											<div class="blog-item__content">
+												<div class="blog-item__date">
+													20.12.2023
+												</div>
+												<div class="blog-item__title heading-6">
+													<h6>
+														Approved program for transitioning to our hydro dismantling asda adsa...
+													</h6>
+												</div>
+												<a href="#" class="blog-item__link btn btn--white">
+													Read more
+												</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+						const blogSwiper = new Swiper('.blog__slider', {
+							observer: true,
+							observeParents: true,
+							slidesPerView: 1.15,
+							spaceBetween: 15,
+							speed: 800,
+
+							navigation: {
+								prevEl: '.blog-prev',
+								nextEl: '.blog-next',
+							},
+
+							breakpoints: {
+								400: {
+									slidesPerView: 1.6,
+									spaceBetween: 15,
+								},
+								500: {
+									slidesPerView: 2.2,
+									spaceBetween: 15,
+								},
+								767: {
+									slidesPerView: 3,
+									spaceBetween: 15,
+								},
+								991: {
+									slidesPerView: 4,
+									spaceBetween: 20,
+								}
+							}
+						});
+					});
+				</script>
+			</section>
+
+			<section class="healthy section-pb">
+				<div class="healthy__container">
+					<div class="healthy__body">
+						<div class="healthy__tag">
+							Stay healthy with us
+						</div>
+
+						<div class="healthy__content">
+							<div class="healthy__title heading-2">
+								<h2>
+									Dive into a life of clarity, energy, and balance with our tailored supplements.
+								</h2>
+							</div>
+							<div class="healthy__text text">
+								<p>
+									Boost brain functions, sharpen vision, fortify immunity, and support your heart, bones, joints, and
+									digestive system.
+									Why settle for less? Elevate your well-being today. Why settle for less? Elevate your well-being today. Why
+									settle for
+									less?
+								</p>
+							</div>
+							<a href="#" class="healthy__link">
+								Read more
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="pillows-decore">
+				<img class="pillows-decore--pc" src="img/main/pillows.webp" alt="Image">
+				<img class="pillows-decore--mobile" src="img/main/pillows-mobile.webp" alt="Image">
+				<a href="#" class="pillows-decore__shop">
+					Shop <br /> now
+				</a>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__leftside">
+						<div class="footer__top">
+							<a href="home.html" class="footer__logo">
+								Supplenation
+							</a>
+							<ul class="footer__socials">
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#tik-tok"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer__bottom" data-da=".footer__content, 767.98, 1">
+							<div class="footer__copy">© Supplenation, 2024.</div>
+							<a href="#" class="footer__dev"><span>://</span> Development and promotion</a>
+						</div>
+					</div>
+
+					<div class="footer__content content-footer">
+						<div class="content-footer__top">
+
+							<div data-spollers="992,max" data-one-spoller class="spollers content-footer__spollers">
+								<details class="content-footer__item">
+									<summary class="content-footer__title">
+										Navigation
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</summary>
+									<div class="content-footer__body">
+										<ul class="content-footer__list">
+											<li><a href="#">About us</a></li>
+											<li><a href="#">Products</a></li>
+											<li><a href="#">Brands</a></li>
+											<li><a href="#">Contacts</a></li>
+											<li><a href="#">Privacy Policy</a></li>
+										</ul>
+									</div>
+								</details>
+
+								<details class="content-footer__item">
+									<summary class="content-footer__title">
+										Catalog
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</summary>
+									<div class="content-footer__body">
+										<ul class="content-footer__list">
+											<li><a href="#">For the eyes</a></li>
+											<li><a href="#">For memory</a></li>
+											<li><a href="#">For the brain</a></li>
+											<li><a href="#">Weight loss</a></li>
+										</ul>
+									</div>
+								</details>
+
+								<details class="content-footer__item">
+									<summary class="content-footer__title">
+										Contacts
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+										</svg>
+									</summary>
+									<div class="content-footer__body">
+										<ul class="content-footer__list">
+											<li><a href="tel:15555551234">+1 555 555-1234</a></li>
+											<li><a href="mailto:info@supplenation.es">info@supplenation.es</a></li>
+											<li><a href="#">Carrer de Narcís Giralt 67, Sabadell 08202</a></li>
+										</ul>
+									</div>
+								</details>
+							</div>
+
+
+							<div class="content-footer__get-touch get-touch-footer">
+								<div class="get-touch-footer__title">
+									get in touch
+								</div>
+								<form class="get-touch-footer__form form">
+									<label for="footer-mail" class="form__label">Need to contact us, leave your email</label>
+									<input type="text" name="mail" id="footer-mail" placeholder="Enter your email" class="form__input">
+
+									<div class="form__check">
+										<input id="check-footer" class="form__checkbox" type="checkbox" name="check">
+										<label for="check-footer" class="form__warning">
+											<span>
+												I consent to the processing of <a href="#" target="_blank">personal data</a>
+											</span>
+										</label>
+									</div>
+
+									<button type="submit" class="form__button btn">
+										Send mail
+									</button>
+								</form>
+							</div>
+						</div>
+
+
+						<div class="content-footer__text">
+							<p>
+								The statements made regarding these products have not been evaluated by the Food and Drug Administration.
+								The efficacy
+								of these products has not been confirmed by FDA-approved research. These products are not intended to
+								diagnose, treat,
+								cure or prevent any disease. *Results are not guaranteed. The effectiveness of a particular supplement
+								depends on
+								individual body characteristics
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			//------------Form check---------------------
+			document.addEventListener('DOMContentLoaded', function() {
+				const checkbox = document.querySelector('.form__checkbox');
+				const submitButton = document.querySelector('.form__button');
+
+				submitButton.disabled = !checkbox.checked;
+
+				checkbox.addEventListener('change', function() {
+					submitButton.disabled = !checkbox.checked;
+				});
+			});
+
+			document.addEventListener('DOMContentLoaded', function() {
+				const checkbox = document.querySelector('.form__checkbox');
+				const submitButton = document.querySelector('.form__button');
+
+				submitButton.disabled = !checkbox.checked;
+
+				checkbox.addEventListener('change', function() {
+					submitButton.disabled = !checkbox.checked;
+				});
+			});
+		</script>
+		<!-- Modals -->
+
+		<div class="modal" data-modal="success-modal">
+			<div class="modal-solid success-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<img src="img/content-icons/close-modal.svg" alt="Close icon">
+				</button>
+				<div class="modal-body success-modal">
+					<div class="success-modal__content">
+						<div class="success-modal__icon">
+							<img src="img/content-icons/success.svg" alt="Success image">
+						</div>
+
+						<div class="success-modal__title heading-3">
+							<h3>
+								Your data has been sent
+							</h3>
+						</div>
+						<div class="success-modal__text text">
+							<p>
+								Thank you for choosing us! We will contact you shortly!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" data-modal="error-modal">
+			<div class="modal-solid error-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<img src="img/content-icons/close-modal.svg" alt="Close icon">
+				</button>
+				<div class="modal-body error-modal">
+					<div class="error-modal__content">
+						<div class="error-modal__icon">
+							<img src="img/content-icons/error.svg" alt="Error image">
+						</div>
+
+						<div class="error-modal__title heading-3">
+							<h3>
+								Sorry, an error occurred
+							</h3>
+						</div>
+						<div class="error-modal__text text">
+							<p>
+								Please try again!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" data-modal="apply-delete-modal">
+			<div class="modal-solid apply-delete-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<img src="img/content-icons/close-modal.svg" alt="Close icon">
+				</button>
+				<div class="modal-body apply-delete-modal">
+					<div class="apply-delete__content">
+						<div class="apply-delete__header">
+							<div class="apply-delete__title heading-3">
+								<h3>
+									Are you sure you want to remove all items from your cart?
+								</h3>
+							</div>
+							<div class="apply-delete__text text">
+								<p>
+									You will have to add all the products again.
+								</p>
+							</div>
+						</div>
+
+						<div class="apply-delete__buttons">
+							<button class="apply-delete__button red-btn">
+								Yes, Delete
+							</button>
+							<button class="apply-delete__button btn">
+								Leave items
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" data-modal="feedback-modal">
+			<div class="modal-solid feedback-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<img src="img/content-icons/close-modal.svg" alt="Close icon">
+				</button>
+				<div class="modal-body feedback-modal">
+					<div class="feedback-modal__content">
+						<div class="feedback-modal__title heading-3">
+							<h3>
+								Leave your feedback
+							</h3>
+						</div>
+
+						<form class="feedback-modal__form">
+							<div class="feedback-modal__box">
+								<input class="feedback-modal__input" type="text" name="name" placeholder="Name">
+
+								<input class="feedback-modal__input" type="text" name="mail" placeholder="Email">
+							</div>
+
+							<textarea class="feedback-modal__textarea" name="textarea" placeholder="Message"></textarea>
+
+							<div class="feedback-modal__rating">
+								<input type="radio" name="rating" id="star5" value="5">
+								<label for="star5" class="star"></label>
+								<input type="radio" name="rating" id="star4" value="4">
+								<label for="star4" class="star"></label>
+								<input type="radio" name="rating" id="star3" value="3">
+								<label for="star3" class="star"></label>
+								<input type="radio" name="rating" id="star2" value="2" checked>
+								<label for="star2" class="star"></label>
+								<input type="radio" name="rating" id="star1" value="1">
+								<label for="star1" class="star"></label>
+							</div>
+
+							<div class="feedback-modal__check">
+								<input id="feedback-modal-check" class="feedback-modal__checkbox" type="checkbox" name="check">
+								<label for="feedback-modal-check" class="feedback-modal__warning">
+									<span>
+										I consent to the processing of <a href="#" target="_blank">personal data</a>
+									</span>
+								</label>
+							</div>
+
+							<button type="submit" class="feedback-modal__button btn">
+								Send mail
+							</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="product-popup" class="add-to-cart-popup">
+			<div class="add-to-cart-popup__body">
+				<div class="add-to-cart-popup__image">
+					<img src="img/product/product-1.webp" alt="Image">
+				</div>
+				<div class="add-to-cart-popup__content">
+					<div class="add-to-cart-popup__wrap">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#basket"></use>
+						</svg>
+						Added to cart
+					</div>
+					<div class="add-to-cart-popup__title">
+						Neuriva Brain Health Strawberry Plus Gummies...
+					</div>
+					<div class="add-to-cart-popup__gummy">
+						50 gummies
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="cookie-popup" class="cookie-popup">
+			<div class="cookie-popup__content">
+				<div class="cookie-popup__text">
+					<p>By using this website, you agree to the processing of <a href="#">cookie files</a>.</p>
+				</div>
+				<button id="agree-btn" class="cookie-popup__button btn">
+					AGREE
+				</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240918120358"></script>
+</body>
+
+</html>
