@@ -2674,9 +2674,11 @@ body.lock {
 }
 .hero-product__thumbs {
   max-width: 530px;
-  margin-left: 0;
-  margin-right: 0;
   height: 125px
+}
+.hero-product__thumbs.swiper {
+  margin-left: 0;
+  margin-right: 0
 }
 .hero-product__content {
   flex: 1 0 51%;

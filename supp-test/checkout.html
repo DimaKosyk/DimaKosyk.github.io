@@ -6,14 +6,15 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240918120358">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240919003142">
+	<meta name="description" content="Dive into a life of clarity, energy, and balance with our tailored supplements.">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!--Swiper JS-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240918120358" />
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240918120358" async></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240919003142" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240919003142"></script>
 
 </head>
 
@@ -23,12 +24,12 @@
 			<div class="header__container">
 				<div class="header__body">
 
-					<a href="home.html" class="header__logo">
+					<a href="home.html" class="header__logo" aria-label="Site Logo">
 						Supplenation
 					</a>
 
 					<div class="header__menu menu">
-						<button type="button" class="menu__icon icon-menu" data-da=".header__rightside, 991.98"><span></span></button>
+						<button type="button" class="menu__icon icon-menu" data-da=".header__rightside, 991.98" title="Open mobile menu" aria-label="Open mobile menu"><span></span></button>
 						<nav class="menu__body">
 							<ul class="menu__list" id="menu">
 								<li class="menu__drop-down">
@@ -97,21 +98,21 @@
 							</ul>
 							<ul class="menu__socials">
 								<li>
-									<a href="#" target="_blank">
+									<a href="#" target="_blank" aria-label="Go to Instagram">
 										<svg>
 											<use xlink:href="img/icons/icons.svg#inst"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">
+									<a href="#" target="_blank" aria-label="Go to Tik Tok">
 										<svg>
 											<use xlink:href="img/icons/icons.svg#tik-tok"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">
+									<a href="#" target="_blank" aria-label="Go to Facebook">
 										<svg>
 											<use xlink:href="img/icons/icons.svg#facebook"></use>
 										</svg>
@@ -208,12 +209,12 @@
 
 										<div class="wrapper-checkout__box">
 											<div class="wrapper-checkout__input-container">
-												<input type="mail" id="email-address" class="wrapper-checkout__input" placeholder="" required>
+												<input type="email" id="email-address" class="wrapper-checkout__input" placeholder="" required>
 												<label for="email-address" class="wrapper-checkout__label">Email address</label>
 											</div>
 
 											<div class="wrapper-checkout__input-container">
-												<input type="phone" id="phone-number" class="wrapper-checkout__input" placeholder="" required>
+												<input type="tel" id="phone-number" class="wrapper-checkout__input" placeholder="" required>
 												<label for="phone-number" class="wrapper-checkout__label">Phone number</label>
 											</div>
 										</div>
@@ -226,7 +227,7 @@
 									</div>
 									<div class="wrapper-checkout__content">
 										<div class="wrapper-checkout__select-container">
-											<div id="delivery-country" class="wrapper-checkout__custom-select custom-select" placeholder="">
+											<div id="delivery-country" class="wrapper-checkout__custom-select custom-select">
 												<div class="wrapper-checkout__select-trigger select-trigger">
 													<span>United state</span>
 													<svg>
@@ -292,14 +293,14 @@
 												<input type="radio" id="free-shipping" name="shipping" value="free-shipping">
 												<label for="free-shipping" class="wrapper-checkout__shipping">
 													<span class="radio-circle">
-														<div class="radio-circle-center"></div>
+														<span class="radio-circle-center"></span>
 													</span>
-													<div class="wrapper-checkout__shipping-title">
+													<span class="wrapper-checkout__shipping-title">
 														Free shipping <span>(3-5 days)</span>
-													</div>
-													<div class="wrapper-checkout__price">
+													</span>
+													<span class="wrapper-checkout__price">
 														$0.00
-													</div>
+													</span>
 												</label>
 											</div>
 
@@ -307,14 +308,14 @@
 												<input type="radio" id="express-shipping" name="shipping" value="express-shipping">
 												<label for="express-shipping" class="wrapper-checkout__shipping">
 													<span class="radio-circle">
-														<div class="radio-circle-center"></div>
+														<span class="radio-circle-center"></span>
 													</span>
-													<div class="wrapper-checkout__shipping-title">
+													<span class="wrapper-checkout__shipping-title">
 														Express shipping <span>(1-2 days)</span>
-													</div>
-													<div class="wrapper-checkout__price">
+													</span>
+													<span class="wrapper-checkout__price">
 														$5.00
-													</div>
+													</span>
 												</label>
 											</div>
 										</div>
@@ -332,16 +333,16 @@
 												<input type="radio" id="same-shipping-address" name="billing" value="same" checked>
 												<label for="same-shipping-address" class="billing-checkout__label">
 													<span class="radio-circle">
-														<div class="radio-circle-center"></div>
+														<span class="radio-circle-center"></span>
 													</span>
-													<div class="billing-checkout__title">
+													<span class="billing-checkout__title">
 														Same as shipping address
-													</div>
+													</span>
 												</label>
 
 												<div class="billing-checkout__body" id="same-address-fields">
 													<div class="wrapper-checkout__select-container">
-														<div id="same-country" class="wrapper-checkout__custom-select custom-select" placeholder="">
+														<div id="same-country" class="wrapper-checkout__custom-select custom-select">
 															<div class="wrapper-checkout__select-trigger select-trigger">
 																<span>United state</span>
 																<svg>
@@ -396,16 +397,16 @@
 												<input type="radio" id="different-billing-address" name="billing" value="different">
 												<label for="different-billing-address" class="billing-checkout__label">
 													<span class="radio-circle">
-														<div class="radio-circle-center"></div>
+														<span class="radio-circle-center"></span>
 													</span>
-													<div class="billing-checkout__title">
+													<span class="billing-checkout__title">
 														PayPal
-													</div>
+													</span>
 												</label>
 
 												<div class="billing-checkout__body" id="different-address-fields">
 													<div class="wrapper-checkout__select-container">
-														<div id="different-country" class="wrapper-checkout__custom-select custom-select" placeholder="">
+														<div id="different-country" class="wrapper-checkout__custom-select custom-select">
 															<div class="wrapper-checkout__select-trigger select-trigger">
 																<span>United state</span>
 																<svg>
@@ -475,16 +476,16 @@
 												<input type="radio" id="credit-card" name="payment" value="credit" checked>
 												<label for="credit-card" class="payment-checkout__label">
 													<span class="radio-circle">
-														<div class="radio-circle-center"></div>
+														<span class="radio-circle-center"></span>
 													</span>
-													<div class="payment-checkout__title">
+													<span class="payment-checkout__title">
 														Credit card
-													</div>
-													<div class="payment-checkout__logos">
+													</span>
+													<span class="payment-checkout__logos">
 														<img src="img/payment/payment-1.svg" alt="Image">
 														<img src="img/payment/payment-2.svg" alt="Image">
 														<img src="img/payment/payment-6.svg" alt="Image">
-													</div>
+													</span>
 												</label>
 
 												<div class="payment-checkout__body" id="credit-fields">
@@ -524,14 +525,14 @@
 												<input type="radio" id="paypal-card" name="payment" value="paypal">
 												<label for="paypal-card" class="payment-checkout__label">
 													<span class="radio-circle">
-														<div class="radio-circle-center"></div>
+														<span class="radio-circle-center"></span>
 													</span>
-													<div class="payment-checkout__title">
+													<span class="payment-checkout__title">
 														PayPal
-													</div>
-													<div class="payment-checkout__logos">
+													</span>
+													<span class="payment-checkout__logos">
 														<img src="img/payment/payment-6.svg" alt="Image">
-													</div>
+													</span>
 												</label>
 
 												<div class="payment-checkout__body" id="paypal-fields">
@@ -576,7 +577,7 @@
 									</div>
 									<div class="wrapper-checkout__content">
 										<div class="wrapper-checkout__textarea-container">
-											<textarea type="text" id="checkout-comment" class="wrapper-checkout__textarea" placeholder="" required></textarea>
+											<textarea id="checkout-comment" class="wrapper-checkout__textarea" placeholder="" required></textarea>
 											<label for="checkout-comment" class="wrapper-checkout__label">Your comment</label>
 										</div>
 									</div>
@@ -611,16 +612,16 @@
 								<div data-spollers class="aside-checkout__spollers spollers-aside-checkout">
 									<details class="spollers-aside-checkout__item">
 										<summary class="spollers-aside-checkout__title">
-											<div class="spollers-aside-checkout__wrap heading-6">
+											<span class="spollers-aside-checkout__wrap heading-6">
 												<h6>
 													<span>2</span> items
 												</h6>
-											</div>
-											<div class="spollers-aside-checkout__arrow">
+											</span>
+											<span class="spollers-aside-checkout__arrow">
 												<svg>
 													<use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
 												</svg>
-											</div>
+											</span>
 										</summary>
 										<div class="spollers-aside-checkout__body">
 											<div class="aside-checkout__item item-basket">
@@ -923,26 +924,26 @@
 				<div class="footer__body">
 					<div class="footer__leftside">
 						<div class="footer__top">
-							<a href="home.html" class="footer__logo">
+							<a href="home.html" class="footer__logo" aria-label="Site Logo">
 								Supplenation
 							</a>
 							<ul class="footer__socials">
 								<li>
-									<a href="#" target="_blank">
+									<a href="#" target="_blank" aria-label="Go to Instagram">
 										<svg>
 											<use xlink:href="img/icons/icons.svg#inst"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">
+									<a href="#" target="_blank" aria-label="Go to Tik Tok">
 										<svg>
 											<use xlink:href="img/icons/icons.svg#tik-tok"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">
+									<a href="#" target="_blank" aria-label="Go to Facebook">
 										<svg>
 											<use xlink:href="img/icons/icons.svg#facebook"></use>
 										</svg>
@@ -1253,7 +1254,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240918120358"></script>
+	<script src="js/app.min.js?_v=20240919003142"></script>
 </body>
 
 </html>
