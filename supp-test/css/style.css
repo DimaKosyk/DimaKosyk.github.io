@@ -9962,6 +9962,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .choose-card__wrap {
     display: flex
   }
+  .hero__slider {
+    max-height: 600px
+  }
   .hero__slide {
     aspect-ratio: 335/585
   }
