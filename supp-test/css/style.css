@@ -1598,7 +1598,7 @@ body.lock {
   overflow: visible
 }
 .feedback__slide {
-  height: auto
+  height: auto!important
 }
 .feedback-card {
   height: 100%;
