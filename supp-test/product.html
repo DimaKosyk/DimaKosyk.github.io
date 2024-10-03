@@ -6,15 +6,15 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240920155458">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241003085636">
 	<meta name="description" content="Dive into a life of clarity, energy, and balance with our tailored supplements.">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!--Swiper JS-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240920155458" />
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240920155458" async></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20241003085636" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20241003085636" async></script>
 
 </head>
 
@@ -33,14 +33,32 @@
 						<nav class="menu__body">
 							<ul class="menu__list" id="menu">
 								<li class="menu__drop-down">
-									<a href="#" class="menu-link__drop-down">
-										Catalog
-										<svg>
-											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
-										</svg>
-									</a>
+									<div class="menu-link__drop-downs">
+										<a href="catalog.html" class="menu-link__other-page">
+											Catalog
+										</a>
+										<button class="menu-link__drop-down">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+											</svg>
+										</button>
+									</div>
 									<div class="menu__submenu submenu-uniq">
 										<ul>
+											<li>
+												<a href="#">
+
+													Memory Supplements
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div>
+														<img src="img/menu-icons/item-1.svg" alt="Brain icon">
+													</div>
+													Memory Supplements
+												</a>
+											</li>
 											<li>
 												<a href="#">
 													<div>
@@ -79,12 +97,16 @@
 								<li><a href="#">About us</a></li>
 								<li><a href="#">Products</a></li>
 								<li class="menu__drop-down menu__drop-down--simple">
-									<a href="#" class="menu-link__drop-down">
-										Brands
-										<svg>
-											<use xlink:href="img/icons/icons.svg#arrow-down"></use>
-										</svg>
-									</a>
+									<div class="menu-link__drop-downs">
+										<a href="brands.html" class="menu-link__other-page">
+											Brands
+										</a>
+										<button class="menu-link__drop-down">
+											<svg>
+												<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+											</svg>
+										</button>
+									</div>
 									<div class="menu__submenu submenu-simple">
 										<ul>
 											<li><a href="#">For the eyes</a></li>
@@ -136,36 +158,58 @@
 			</div>
 
 			<script>
-				document.addEventListener('DOMContentLoaded', function() {
-					const menuLinks = document.querySelectorAll('.menu-link__drop-down');
+				//--Menu drop-downs--
+				document.addEventListener('click', function(event) {
+					const allDropdowns = document.querySelectorAll('.menu__drop-down'); // Вибираємо всі випадаючі списки з однаковим класом
+					const activeClass = 'drop-down'; // Клас для відкритого списку
 
-					menuLinks.forEach(link => {
-						link.addEventListener('click', function(event) {
-							event.preventDefault();
-
-							const parentItem = this.parentNode;
-							const isActive = parentItem.classList.contains('drop-down');
-
-							document.querySelectorAll('.menu__drop-down').forEach(item => {
-								item.classList.remove('drop-down');
-							});
-
-							if (!isActive) {
-								parentItem.classList.add('drop-down');
+					allDropdowns.forEach(dropdown => {
+						// Якщо натискання відбулося на конкретний випадаючий список
+						if (dropdown.contains(event.target)) {
+							// Якщо список вже активний, закриваємо його
+							if (dropdown.classList.contains(activeClass)) {
+								dropdown.classList.remove(activeClass); // Закриваємо
+							} else {
+								// Закриваємо всі інші списки перед відкриттям цього
+								allDropdowns.forEach(d => d.classList.remove(activeClass));
+								dropdown.classList.add(activeClass); // Відкриваємо конкретний список
 							}
-						});
-					});
-
-					document.addEventListener('click', function(event) {
-						const target = event.target;
-
-						if (!target.closest('#menu')) {
-							document.querySelectorAll('.menu__item').forEach(item => {
-								item.classList.remove('drop-down');
-							});
+						} else {
+							// Якщо натискання поза межами списку, закриваємо всі списки
+							dropdown.classList.remove(activeClass);
 						}
 					});
 				});
+				// document.addEventListener('DOMContentLoaded', function () {
+				//   const menuLinks = document.querySelectorAll('.menu-link__drop-down');
+
+				//   menuLinks.forEach(link => {
+				//     link.addEventListener('click', function (event) {
+				//       event.preventDefault();
+
+				//       const parentItem = this.parentNode;
+				//       const isActive = parentItem.classList.contains('drop-down');
+
+				//       document.querySelectorAll('.menu__drop-down').forEach(item => {
+				//         item.classList.remove('drop-down');
+				//       });
+
+				//       if (!isActive) {
+				//         parentItem.classList.add('drop-down');
+				//       }
+				//     });
+				//   });
+
+				//   document.addEventListener('click', function (event) {
+				//     const target = event.target;
+
+				//     if (!target.closest('#menu')) {
+				//       document.querySelectorAll('.menu__item').forEach(item => {
+				//         item.classList.remove('drop-down');
+				//       });
+				//     }
+				//   });
+				// });
 			</script>
 		</header>
 		<main class="page">
@@ -1772,7 +1816,7 @@
 			});
 		</script>
 	</div>
-	<script src="js/app.min.js?_v=20240920155458"></script>
+	<script src="js/app.min.js?_v=20241003085636"></script>
 </body>
 
 </html>
