@@ -9864,7 +9864,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -moz-column-gap: 0;
     column-gap: 0
   }
-  .hero__slide {
+  .hero__slide.swiper-slide {
     height: auto
   }
   .categories__items {
