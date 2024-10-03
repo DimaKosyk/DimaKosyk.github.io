@@ -9855,6 +9855,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     flex-direction: row;
     justify-content: space-between
   }
+  .hero__slider {
+    max-height: 650px;
+    visibility: hidden
+  }
   .hero__slider.swiper {
     overflow: visible
   }
