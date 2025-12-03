@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Account receivable</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20251114134937">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Mulish:regular,500,600,700&display=swap&_v=20251114134937" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page-wrapper">
+			<aside class="aside-navbar">
+				<div class="aside-navbar__top">
+					<div class="aside-navbar__leftside">
+						<a href="home.html" class="logo">
+							<img src="img/logo.webp" alt="Logo image">
+						</a>
+
+						<button type="button" class="open-aside" title="Open aside" aria-label="Open aside">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+								<path d="M8.22481 4.50005L12.5998 9.00005M12.5998 9.00005L8.22481 13.5001M12.5998 9.00005L1.7998 9.00005M16.1998 16.2001L16.1998 1.80005" stroke="#191919" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<span></span>
+						</button>
+					</div>
+
+					<button type="button" class="basket" data-target-modal="basket-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<g clip-path="url(#clip0_2007_4101)">
+								<path d="M0.833496 0.833328H4.16683L6.40016 11.9917C6.47637 12.3753 6.68509 12.72 6.98978 12.9652C7.29448 13.2105 7.67574 13.3408 8.06683 13.3333H16.1668C16.5579 13.3408 16.9392 13.2105 17.2439 12.9652C17.5486 12.72 17.7573 12.3753 17.8335 11.9917L19.1668 4.99999H5.00016M8.3335 17.5C8.3335 17.9602 7.9604 18.3333 7.50016 18.3333C7.03992 18.3333 6.66683 17.9602 6.66683 17.5C6.66683 17.0398 7.03992 16.6667 7.50016 16.6667C7.9604 16.6667 8.3335 17.0398 8.3335 17.5ZM17.5002 17.5C17.5002 17.9602 17.1271 18.3333 16.6668 18.3333C16.2066 18.3333 15.8335 17.9602 15.8335 17.5C15.8335 17.0398 16.2066 16.6667 16.6668 16.6667C17.1271 16.6667 17.5002 17.0398 17.5002 17.5Z" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</g>
+							<defs>
+								<clipPath id="clip0_2007_4101">
+									<rect width="20" height="20" fill="white" />
+								</clipPath>
+							</defs>
+						</svg>
+						<span>Кошик<span>(1)</span></span>
+					</button>
+				</div>
+
+				<div class="aside-navbar__content">
+					<ul class="subheading">
+						<li>
+							<a href="home.html">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M8.33333 2.5H2.5V8.33333H8.33333V2.5Z" stroke="#046AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M17.5 2.5H11.6667V8.33333H17.5V2.5Z" stroke="#046AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M17.5 11.6667H11.6667V17.5H17.5V11.6667Z" stroke="#046AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M8.33333 11.6667H2.5V17.5H8.33333V11.6667Z" stroke="#046AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<span>Головна</span>
+							</a>
+						</li>
+						<li>
+							<a href="catalogue-page.html">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M18.3337 15.8333C18.3337 16.2754 18.1581 16.6993 17.8455 17.0118C17.5329 17.3244 17.109 17.5 16.667 17.5H3.33366C2.89163 17.5 2.46771 17.3244 2.15515 17.0118C1.84259 16.6993 1.66699 16.2754 1.66699 15.8333V4.16667C1.66699 3.72464 1.84259 3.30072 2.15515 2.98816C2.46771 2.67559 2.89163 2.5 3.33366 2.5H7.50033L9.16699 5H16.667C17.109 5 17.5329 5.17559 17.8455 5.48816C18.1581 5.80072 18.3337 6.22464 18.3337 6.66667V15.8333Z" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<span>Каталог</span>
+							</a>
+						</li>
+						<li>
+							<a href="orders-page.html">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<g clip-path="url(#clip0_2007_1495)">
+										<path d="M0.833008 0.833344H4.16634L6.39967 11.9917C6.47588 12.3753 6.6846 12.72 6.9893 12.9653C7.29399 13.2105 7.67526 13.3408 8.06634 13.3333H16.1663C16.5574 13.3408 16.9387 13.2105 17.2434 12.9653C17.5481 12.72 17.7568 12.3753 17.833 11.9917L19.1663 5.00001H4.99967M8.33301 17.5C8.33301 17.9602 7.95991 18.3333 7.49967 18.3333C7.03944 18.3333 6.66634 17.9602 6.66634 17.5C6.66634 17.0398 7.03944 16.6667 7.49967 16.6667C7.95991 16.6667 8.33301 17.0398 8.33301 17.5ZM17.4997 17.5C17.4997 17.9602 17.1266 18.3333 16.6663 18.3333C16.2061 18.3333 15.833 17.9602 15.833 17.5C15.833 17.0398 16.2061 16.6667 16.6663 16.6667C17.1266 16.6667 17.4997 17.0398 17.4997 17.5Z" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</g>
+									<defs>
+										<clipPath id="clip0_2007_1495">
+											<rect width="20" height="20" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+								<span>Замовлення</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M6.66667 5H17.5M6.66667 10H17.5M6.66667 15H17.5M2.5 5H2.50833M2.5 10H2.50833M2.5 15H2.50833" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<span>Розхідні накладні</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="active">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M15.833 4.16668L4.16634 15.8333M7.49967 5.41668C7.49967 6.56727 6.56693 7.50001 5.41634 7.50001C4.26575 7.50001 3.33301 6.56727 3.33301 5.41668C3.33301 4.26608 4.26575 3.33334 5.41634 3.33334C6.56693 3.33334 7.49967 4.26608 7.49967 5.41668ZM16.6663 14.5833C16.6663 15.7339 15.7336 16.6667 14.583 16.6667C13.4324 16.6667 12.4997 15.7339 12.4997 14.5833C12.4997 13.4328 13.4324 12.5 14.583 12.5C15.7336 12.5 16.6663 13.4328 16.6663 14.5833Z" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<span>Заборгованість</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<g clip-path="url(#clip0_2007_1507)">
+										<path d="M17.6747 13.2417C17.1445 14.4954 16.3153 15.6002 15.2596 16.4594C14.2038 17.3186 12.9537 17.9062 11.6184 18.1706C10.2831 18.4351 8.90337 18.3684 7.59981 17.9765C6.29624 17.5845 5.10854 16.8792 4.14053 15.9222C3.17253 14.9652 2.4537 13.7856 2.04688 12.4866C1.64006 11.1876 1.55765 9.80873 1.80685 8.47052C2.05605 7.13231 2.62926 5.87551 3.47639 4.81001C4.32351 3.74452 5.41875 2.90275 6.66635 2.35832M18.333 9.99999C18.333 8.90564 18.1175 7.82201 17.6987 6.81096C17.2799 5.79991 16.6661 4.88125 15.8922 4.10743C15.1184 3.33361 14.1998 2.71978 13.1887 2.30099C12.1777 1.8822 11.094 1.66666 9.99968 1.66666V9.99999H18.333Z" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</g>
+									<defs>
+										<clipPath id="clip0_2007_1507">
+											<rect width="20" height="20" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+								<span>Взаєморозрахунки</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<g clip-path="url(#clip0_2007_1511)">
+										<path d="M7.57533 7.50002C7.77125 6.94308 8.15795 6.47344 8.66695 6.1743C9.17596 5.87515 9.77441 5.7658 10.3563 5.86561C10.9382 5.96543 11.466 6.26796 11.8462 6.71963C12.2264 7.1713 12.4345 7.74296 12.4337 8.33335C12.4337 10 9.93366 10.8334 9.93366 10.8334M10.0003 14.1667H10.0087M18.3337 10C18.3337 14.6024 14.6027 18.3334 10.0003 18.3334C5.39795 18.3334 1.66699 14.6024 1.66699 10C1.66699 5.39765 5.39795 1.66669 10.0003 1.66669C14.6027 1.66669 18.3337 5.39765 18.3337 10Z" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</g>
+									<defs>
+										<clipPath id="clip0_2007_1511">
+											<rect width="20" height="20" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+								<span>Часті питання</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M11.6663 1.66669H4.99967C4.55765 1.66669 4.13372 1.84228 3.82116 2.15484C3.5086 2.4674 3.33301 2.89133 3.33301 3.33335V16.6667C3.33301 17.1087 3.5086 17.5326 3.82116 17.8452C4.13372 18.1578 4.55765 18.3334 4.99967 18.3334H14.9997C15.4417 18.3334 15.8656 18.1578 16.1782 17.8452C16.4907 17.5326 16.6663 17.1087 16.6663 16.6667V6.66669M11.6663 1.66669L16.6663 6.66669M11.6663 1.66669V6.66669H16.6663M13.333 10.8334H6.66634M13.333 14.1667H6.66634M8.33301 7.50002H6.66634" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<span>Сертифікати</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M17.5 9.58336C17.5029 10.6832 17.2459 11.7683 16.75 12.75C16.162 13.9265 15.2581 14.916 14.1395 15.6078C13.021 16.2995 11.7319 16.6662 10.4167 16.6667C9.31678 16.6696 8.23176 16.4126 7.25 15.9167L2.5 17.5L4.08333 12.75C3.58744 11.7683 3.33047 10.6832 3.33333 9.58336C3.33384 8.26815 3.70051 6.97907 4.39227 5.86048C5.08402 4.7419 6.07355 3.838 7.25 3.25002C8.23176 2.75413 9.31678 2.49716 10.4167 2.50002H10.8333C12.5703 2.59585 14.2109 3.32899 15.4409 4.55907C16.671 5.78915 17.4042 7.42973 17.5 9.16669V9.58336Z" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<span>Чат</span>
+								<div class="messages-count">
+									3
+								</div>
+							</a>
+						</li>
+					</ul>
+
+					<button class="log-out subheading">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path d="M7.5 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H7.5M13.3333 14.1667L17.5 10M17.5 10L13.3333 5.83333M17.5 10H7.5" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>Вийти</span>
+					</button>
+				</div>
+			</aside>
+			<div class="page-content">
+				<header class="header">
+					<div class="header__wrapper">
+						<div class="header__body">
+							<div class="header__leftside">
+								<div class="heading-2">
+									Дебіторська заборгованість
+								</div>
+							</div>
+
+							<div class="header__rightside">
+								<div class="manager">
+									<div class="manager-wrapper">
+										<span class="description">Мій мененджер</span>
+										<span class="link">Грицьків Ростик</span>
+									</div>
+									<ul class="link">
+										<li>
+											<a href="tel:0675523680">(067) 552-36-80</a>
+										</li>
+										<li>
+											<a href="mailto:rostik.gritskiv1@gmail.com">rostik.gritskiv1@gmail.com</a>
+										</li>
+									</ul>
+								</div>
+
+								<button type="button" class="basket" data-target-modal="basket-modal">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<g clip-path="url(#clip0_2007_4101)">
+											<path d="M0.833496 0.833328H4.16683L6.40016 11.9917C6.47637 12.3753 6.68509 12.72 6.98978 12.9652C7.29448 13.2105 7.67574 13.3408 8.06683 13.3333H16.1668C16.5579 13.3408 16.9392 13.2105 17.2439 12.9652C17.5486 12.72 17.7573 12.3753 17.8335 11.9917L19.1668 4.99999H5.00016M8.3335 17.5C8.3335 17.9602 7.9604 18.3333 7.50016 18.3333C7.03992 18.3333 6.66683 17.9602 6.66683 17.5C6.66683 17.0398 7.03992 16.6667 7.50016 16.6667C7.9604 16.6667 8.3335 17.0398 8.3335 17.5ZM17.5002 17.5C17.5002 17.9602 17.1271 18.3333 16.6668 18.3333C16.2066 18.3333 15.8335 17.9602 15.8335 17.5C15.8335 17.0398 16.2066 16.6667 16.6668 16.6667C17.1271 16.6667 17.5002 17.0398 17.5002 17.5Z" stroke="#B2B6C0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										</g>
+										<defs>
+											<clipPath id="clip0_2007_4101">
+												<rect width="20" height="20" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+									<span>Кошик<span>(1)</span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</header>
+				<main class="page">
+					<section class="account-receivable">
+						<div class="main-content">
+							<div class="main-content__body">
+								<ul class="account-receivable-top link">
+									<li>Номер</li>
+									<li>Дата</li>
+									<li>Статус</li>
+									<li>Адреса доставки</li>
+									<li>Сума відвантаження</li>
+									<li>Сума оплачено</li>
+									<li>Сума заборгованості</li>
+								</ul>
+
+								<div class="account-receivable-items">
+									<div class="account-receivable-item link">
+										<div>
+											<span>Номер</span>
+											<span style="color: #046AFF">M0000107509</span>
+										</div>
+
+										<div class="item-date">
+											<span>Дата</span>
+											<span>
+												<span>14.07.2025</span>
+												<span>-</span>
+												<span>14:04</span>
+											</span>
+										</div>
+
+										<div class="item-status">
+											<div style="background-color: #ecfdf3;">
+												<span style="background-color: #039855;"></span>
+												<span style="color: #039855;">Доставлено</span>
+											</div>
+										</div>
+
+										<div>
+											<span>Адреса доставки</span>
+											<span>Лелека Городок, Львівська обл. Городок, вул.Перемишильська, 5г, Договір 2</span>
+										</div>
+
+										<div>
+											<span>Сума відвантаження</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума оплачено</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума заборгованості</span>
+											<span style="color: #E81F1F">45.72 грн</span>
+										</div>
+									</div>
+
+									<div class="account-receivable-item link">
+										<div>
+											<span>Номер</span>
+											<span style="color: #046AFF">M0000107509</span>
+										</div>
+
+										<div class="item-date">
+											<span>Дата</span>
+											<span>
+												<span>14.07.2025</span>
+												<span>-</span>
+												<span>14:04</span>
+											</span>
+										</div>
+
+										<div class="item-status">
+											<div style="background-color: #F1F6FF;">
+												<span style="background-color: #046AFF;"></span>
+												<span style="color: #046AFF;">Доставлено</span>
+											</div>
+										</div>
+
+										<div>
+											<span>Адреса доставки</span>
+											<span>Лелека Городок, Львівська обл. Городок, вул.Перемишильська, 5г, Договір 2</span>
+										</div>
+
+										<div>
+											<span>Сума відвантаження</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума оплачено</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума заборгованості</span>
+											<span style="color: #E81F1F">45.72 грн</span>
+										</div>
+									</div>
+
+									<div class="account-receivable-item link">
+										<div>
+											<span>Номер</span>
+											<span style="color: #046AFF">M0000107509</span>
+										</div>
+
+										<div class="item-date">
+											<span>Дата</span>
+											<span>
+												<span>14.07.2025</span>
+												<span>-</span>
+												<span>14:04</span>
+											</span>
+										</div>
+
+										<div class="item-status">
+											<div style="background-color: #FFFAEB;">
+												<span style="background-color: #F49E27;"></span>
+												<span style="color: #F49E27;">Доставлено</span>
+											</div>
+										</div>
+
+										<div>
+											<span>Адреса доставки</span>
+											<span>Лелека Городок, Львівська обл. Городок, вул.Перемишильська, 5г, Договір 2</span>
+										</div>
+
+										<div>
+											<span>Сума відвантаження</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума оплачено</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума заборгованості</span>
+											<span style="color: #E81F1F">45.72 грн</span>
+										</div>
+									</div>
+
+									<div class="account-receivable-item link">
+										<div>
+											<span>Номер</span>
+											<span style="color: #046AFF">M0000107509</span>
+										</div>
+
+										<div class="item-date">
+											<span>Дата</span>
+											<span>
+												<span>14.07.2025</span>
+												<span>-</span>
+												<span>14:04</span>
+											</span>
+										</div>
+
+										<div class="item-status">
+											<div style="background-color: #FEF3F2;">
+												<span style="background-color: #E81F1F;"></span>
+												<span style="color: #E81F1F;">Доставлено</span>
+											</div>
+										</div>
+
+										<div>
+											<span>Адреса доставки</span>
+											<span>Лелека Городок, Львівська обл. Городок, вул.Перемишильська, 5г, Договір 2</span>
+										</div>
+
+										<div>
+											<span>Сума відвантаження</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума оплачено</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума заборгованості</span>
+											<span style="color: #E81F1F">45.72 грн</span>
+										</div>
+									</div>
+
+									<div class="account-receivable-item link">
+										<div>
+											<span>Номер</span>
+											<span style="color: #046AFF">M0000107509</span>
+										</div>
+
+										<div class="item-date">
+											<span>Дата</span>
+											<span>
+												<span>14.07.2025</span>
+												<span>-</span>
+												<span>14:04</span>
+											</span>
+										</div>
+
+										<div class="item-status">
+											<div style="background-color: #ecfdf3;">
+												<span style="background-color: #039855;"></span>
+												<span style="color: #039855;">Доставлено</span>
+											</div>
+										</div>
+
+										<div>
+											<span>Адреса доставки</span>
+											<span>Лелека Городок, Львівська обл. Городок, вул.Перемишильська, 5г, Договір 2</span>
+										</div>
+
+										<div>
+											<span>Сума відвантаження</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума оплачено</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума заборгованості</span>
+											<span style="color: #E81F1F">45.72 грн</span>
+										</div>
+									</div>
+
+									<div class="account-receivable-item link">
+										<div>
+											<span>Номер</span>
+											<span style="color: #046AFF">M0000107509</span>
+										</div>
+
+										<div class="item-date">
+											<span>Дата</span>
+											<span>
+												<span>14.07.2025</span>
+												<span>-</span>
+												<span>14:04</span>
+											</span>
+										</div>
+
+										<div class="item-status">
+											<div style="background-color: #ecfdf3;">
+												<span style="background-color: #039855;"></span>
+												<span style="color: #039855;">Доставлено</span>
+											</div>
+										</div>
+
+										<div>
+											<span>Адреса доставки</span>
+											<span>Лелека Городок, Львівська обл. Городок, вул.Перемишильська, 5г, Договір 2</span>
+										</div>
+
+										<div>
+											<span>Сума відвантаження</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума оплачено</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума заборгованості</span>
+											<span style="color: #E81F1F">45.72 грн</span>
+										</div>
+									</div>
+
+									<div class="account-receivable-item link">
+										<div>
+											<span>Номер</span>
+											<span style="color: #046AFF">M0000107509</span>
+										</div>
+
+										<div class="item-date">
+											<span>Дата</span>
+											<span>
+												<span>14.07.2025</span>
+												<span>-</span>
+												<span>14:04</span>
+											</span>
+										</div>
+
+										<div class="item-status">
+											<div style="background-color: #ecfdf3;">
+												<span style="background-color: #039855;"></span>
+												<span style="color: #039855;">Доставлено</span>
+											</div>
+										</div>
+
+										<div>
+											<span>Адреса доставки</span>
+											<span>Лелека Городок, Львівська обл. Городок, вул.Перемишильська, 5г, Договір 2</span>
+										</div>
+
+										<div>
+											<span>Сума відвантаження</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума оплачено</span>
+											<span>45.72 грн</span>
+										</div>
+
+										<div>
+											<span>Сума заборгованості</span>
+											<span style="color: #E81F1F">45.72 грн</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-pagination">
+
+								<a href="#" class="pagination-prev">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+										<path d="M12.5 15.25L7.5 10.25L12.5 5.25" stroke="#191919" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+
+								<div class="pagination-numbers">
+									<a href="#">1</a>
+									<a href="#" class="active">2</a>
+									<a href="#">3</a>
+									<span>...</span>
+									<a href="#">21</a>
+								</div>
+
+								<a href="#" class="pagination-next">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+										<path d="M7.5 15.25L12.5 10.25L7.5 5.25" stroke="#191919" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</a>
+
+							</div>
+						</div>
+					</section>
+				</main>
+				<footer class="footer">
+					<div class="footer__container">
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20251114134937"></script>
+</body>
+
+</html>
