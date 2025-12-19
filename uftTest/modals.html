@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Модальні вікна</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20251219145741">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Доставляем рационы правильного питания на день, неделю и месяц. Правильного питание (ПП) для всей семьи в
+  Киеве и пригороде.">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800&display=swap&_v=20251219145741" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap&_v=20251219145741" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Unbounded:600&display=swap&_v=20251219145741" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Geist:regular&display=swap&_v=20251219145741" rel="stylesheet">
+
+
+	<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20251219145741" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20251219145741"></script> -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-aos="fade-down">
+			<div class="container">
+				<div class="header__content">
+					<div class="header__body">
+						<div class="header__leftside">
+							<a href="#" class="header__logo" title="Logo" aria-label="Logo">
+								<img src="img/logo.svg" alt="Logo image">
+							</a>
+
+							<ul class="header__navigation body-s-medium">
+								<li><a href="#">Програми харчування</a></li>
+								<li><a href="#">Як це пpацює?</a></li>
+								<li><a href="#">Відгуки</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+						</div>
+
+						<div class="header__rightside">
+							<div class="header__languages body-s-medium" data-da=".menu__body, 600, 1">
+								<a href="#" class="header__lang lang-active">
+									UA
+								</a>
+								<a href="#" class="header__lang">
+									RU
+								</a>
+							</div>
+							<a href="tel:380980009918" class="header__phone body-s-medium" title="Phone number" aria-label="Phone number">
+								+38 (098) 000-99-18
+							</a>
+							<a href="#" class="header__user" title="User account" aria-label="User account">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.0002 1.66669C7.92909 1.66669 6.25016 3.34562 6.25016 5.41669C6.25016 7.48775 7.92909 9.16669 10.0002 9.16669C12.0712 9.16669 13.7502 7.48775 13.7502 5.41669C13.7502 3.34562 12.0712 1.66669 10.0002 1.66669Z" fill="#F2F2F2" />
+									<path d="M10.0008 10C6.03598 10 3.26467 12.9343 2.92112 16.5887L2.83545 17.5H17.1661L17.0805 16.5887C16.7369 12.9343 13.9656 10 10.0008 10Z" fill="#F2F2F2" />
+								</svg>
+							</a>
+							<div class="header__menu menu">
+								<button type="button" class="menu__icon icon-menu" title="Burger menu" aria-label="Burger menu"><span></span></button>
+								<nav class="menu__body">
+									<ul class="menu__list">
+										<li><a href="#">Програми</a></li>
+										<li><a href="#">Переваги</a></li>
+										<li><a href="#">Калькулятор</a></li>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">Посилання</a></li>
+										<li><a href="#">Посилання</a></li>
+										<li><a href="#">Посилання</a></li>
+										<li><a href="#">Посилання</a></li>
+									</ul>
+
+
+									<div class="menu__wrapper">
+										<a class="menu__order btn btn-bk-we" href="#">Замовити харчування</a>
+										<ul class="menu__socials">
+											<li><a href="#"><img src="img/socials/tg.svg" alt="Telegram icon"></a></li>
+											<li><a href="#"><img src="img/socials/vb.svg" alt="Viber icon"></a></li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<main class="page">
+
+			<button class="sent-data btn" type="button" data-target-modal="thanks-modal">
+				Thanks modal
+			</button>
+
+			<button class="sent-data btn" type="button" data-target-modal="order-modal">
+				Order
+			</button>
+
+			<button class="sent-data btn" type="button" data-target-modal="order-selection-modal">
+				Order type selection modal
+			</button>
+
+			<button class="sent-data btn" type="button" data-target-modal="order-manager-modal">
+				Order with manager modal
+			</button>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__content">
+				<div class="footer__body">
+					<div class="footer__top top-footer">
+						<div class="footer__container">
+
+							<div class="top-footer__content">
+								<img class="top-footer__image image-1" data-prlx-mouse data-prlx-dxr data-prlx-cx="50" data-prlx-a="20" src="img/location.webp" alt="Image">
+								<img class="top-footer__image image-2" data-prlx-mouse data-prlx-dyr data-prlx-cy="50" data-prlx-a="20" src="img/location.webp" alt="Image">
+								<img class="top-footer__image image-3" data-prlx-mouse data-prlx-dxr data-prlx-cx="50" data-prlx-a="20" src="img/location.webp" alt="Image">
+								<img class="top-footer__image image-4" data-prlx-mouse data-prlx-dyr data-prlx-cy="50" data-prlx-a="20" src="img/location.webp" alt="Image">
+								<img class="top-footer__image image-5" data-prlx-mouse data-prlx-dxr data-prlx-cx="50" data-prlx-a="20" src="img/location.webp" alt="Image">
+								<img class="top-footer__image image-6" data-prlx-mouse data-prlx-dyr data-prlx-cy="50" data-prlx-a="20" src="img/location.webp" alt="Image">
+								<img class="top-footer__image image-7" data-prlx-mouse data-prlx-dyr data-prlx-cy="50" data-prlx-a="20" src="img/location.webp" alt="Image">
+
+
+
+								<div class="top-footer__title">
+									#ТвійUFIT
+								</div>
+								<div class="top-footer__text">
+									<p>
+										Тегайте @UFIT #ТвійUFIT та діліться своїми раціонами зі всіма!
+									</p>
+								</div>
+								<a href="#" class="top-footer__link btn btn-we-bk">
+									Підпишіться на нас
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer__line line-footer">
+						<div class="line-footer__content">
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+							<a href="#">@UFIT</a>
+						</div>
+					</div>
+
+					<div class="footer__main main-footer">
+						<div class="footer__container">
+							<div class="main-footer__body">
+								<div class="main-footer__content">
+									<div class="main-footer__top">
+										<a href="#" class="main-footer__logo">
+											<img src="img/logo.svg" alt="Logo image">
+										</a>
+									</div>
+
+									<div class="main-footer__wrapper">
+										<ul class="main-footer__list">
+											<li><a href="#">Посилання</a></li>
+											<li><a href="#">Посилання</a></li>
+											<li><a href="#">Посилання</a></li>
+											<li><a href="#">Посилання</a></li>
+											<li><a href="#">Посилання</a></li>
+										</ul>
+										<ul class="main-footer__list">
+											<li><a href="#">Посилання</a></li>
+											<li><a href="#">Посилання</a></li>
+											<li><a href="#">Посилання</a></li>
+											<li><a href="#">Посилання</a></li>
+											<li><a href="#">Посилання</a></li>
+										</ul>
+										<a href="#" class="main-footer__link btn btn-bk-bk" data-da=".main-footer__top, 991.98" data-goto=".hero" data-goto-header data-goto-speed="1000">
+											<span>Повернутися</span> вгору
+										</a>
+									</div>
+								</div>
+
+								<div class="main-footer__bottom">
+									<div class="main-footer__copy">
+										<p>
+											© U-Fit 2024. Всі права захищені.
+										</p>
+									</div>
+									<div class="main-footer__text">
+										<p>
+											Lorem ipsum dolor sit amet consectetur. Dictum lacinia lorem elementum aliquet quis rhous. Ultrices
+											odio
+											id vel feugiat
+											fringilla mi phasellus. Enim viverra veenatis pellentes urna velit vitae tincidunt lacus. Adipiscing
+											id
+											tempor egestas
+											quis eget. Lorem ipsum.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+		<!-- Modals -->
+
+		<div class="modal" data-modal="thanks-modal">
+			<div class="modal-solid thanks-solid">
+				<div class="modal-body thanks-modal">
+					<div class="thanks-modal__content">
+						<div class="thanks-modal__icon">
+							<img src="img/icons/check.svg" alt="Check icon">
+						</div>
+
+						<div class="thanks-modal__title heading-3">
+							<h3>
+								Дякуємо за ваше замовлення!
+							</h3>
+						</div>
+						<div class="thanks-modal__text description">
+							<p>
+								Lorem ipsum dolor sit amet cctetur. Pellentesque habitant nisl massa to.
+							</p>
+						</div>
+						<a href="home.html" class="thanks-modal__link btn btn-we-bk">
+							Закрити модальне вікно
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-order" data-modal="order-modal">
+			<div class="modal-solid order-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M18 6L6 18" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M6 6L18 18" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<div class="modal-body order-modal">
+					<div class="order-modal__content">
+						<div class="order-modal__header">
+							<div class="order-modal__title heading-3">
+								<h3>
+									Оформлення замовлення
+								</h3>
+							</div>
+							<div class="order-modal__text description">
+								<p>
+									Lorem ipsum dolor sit amet cctetur. Pellentesque habitant nisl massa to.
+								</p>
+							</div>
+						</div>
+
+						<form class="order-modal__body multi-step-form" id="multi-step-form">
+
+							<div class="form-programs__days days-programs step active" id="step-1">
+								<div class="step-pc-wrapper">
+									<div class="days-programs__title heading-5">
+										<h5>
+											Оберіть тривалість
+										</h5>
+									</div>
+
+									<div class="tabs days-tabs">
+										<nav class="days-tabs__navigation navigation-days">
+											<div class="navigation-days__radio radio">
+												<input type="radio" id="everyday" name="days" value="everyday" checked />
+												<label for="everyday">Щоденно</label>
+											</div>
+											<div class="navigation-days__radio radio">
+												<input type="radio" id="weekdays" name="days" value="weekdays" />
+												<label for="weekdays">По будням</label>
+											</div>
+										</nav>
+										<div class="days-tabs__content">
+											<div class="days-tabs__body">
+												<div class="days-tabs__items">
+													<div class="days-tabs__item">
+														<div class="days-tabs__radio radio">
+															<input type="radio" id="try-days" name="regime" value="try-days" />
+															<label for="try-days">Пробні 3 дні</label>
+														</div>
+														<div class="days-tabs__tag">670 ₴/день</div>
+													</div>
+													<div class="days-tabs__item">
+														<div class="days-tabs__radio radio">
+															<input type="radio" id="one-day" name="regime" value="one-day" />
+															<label for="one-day">1 день</label>
+														</div>
+														<div class="days-tabs__tag">730 ₴/день</div>
+														<div class="days-tabs__prize">
+															<img src="img/icons/prize.svg" alt="Prize icon">
+														</div>
+													</div>
+													<div class="days-tabs__item">
+														<div class="days-tabs__radio radio">
+															<input type="radio" id="seven-days" name="regime" value="seven-days" />
+															<label for="seven-days">від 7 днів</label>
+														</div>
+														<div class="days-tabs__tag">730 ₴/день</div>
+													</div>
+													<div class="days-tabs__item">
+														<div class="days-tabs__radio radio">
+															<input type="radio" id="one-week" name="regime" value="one-week" />
+															<label for="one-week">від 7 днів</label>
+														</div>
+														<div class="days-tabs__tag">730 ₴/день</div>
+													</div>
+													<div class="days-tabs__item">
+														<div class="days-tabs__radio radio">
+															<input type="radio" id="two-week" name="regime" value="two-week" checked />
+															<label for="two-week">від 7 днів</label>
+														</div>
+														<div class="days-tabs__tag">730 ₴/день</div>
+														<div class="days-tabs__prize">
+															<img src="img/icons/prize.svg" alt="Prize icon">
+														</div>
+													</div>
+													<div class="days-tabs__item">
+														<div class="days-tabs__radio radio">
+															<input type="radio" id="your-choice" name="regime" value="your-choice" />
+															<label for="your-choice">Свій вибір</label>
+														</div>
+														<div class="days-tabs__tag">730 ₴/день</div>
+													</div>
+												</div>
+
+												<div class="days-tabs__promo promo-days-tabs">
+													<div class="promo-days-tabs__top">
+														<div class="promo-days-tabs__icon">
+															<img src="img/icons/prize.svg" alt="Prize icon">
+														</div>
+														<div class="promo-days-tabs__title">
+															Персональні онлайн заннятя з професійним тренером
+														</div>
+													</div>
+													<div class="promo-days-tabs__code">
+														<span>XLwe12</span>
+														<button type="button" class="promo-days-tabs__copy" data-link="XLwe12" aria-label="Скопіювати промокод" title="Скопіювати промокод">
+															<img src="img/icons/copy.svg" alt="Copy icon">
+														</button>
+													</div>
+												</div>
+
+												<div class="days-tabs__order order-days-tabs">
+													<div class="order-days-tabs__title heading-6">
+														<h6>
+															Всього:
+														</h6>
+													</div>
+													<div class="order-days-tabs__prices">
+														<div class="order-days-tabs__price">
+															<div class="order-days-tabs__old">2915 ₴</div>
+															<div class="order-days-tabs__price-wrap">
+																<div class="order-days-tabs__new">1 915 ₴</div>
+																<span>-1 710 ₴</span>
+															</div>
+															<div class="order-days-tabs__per-day">720 ₴/день</div>
+														</div>
+														<div class="order-days-tabs__bonus">
+															<span>+54₴ бонусів</span>
+															<div class="order-days-tabs__info-icon">
+																<img src="img/icons/info.svg" alt="Info icon">
+															</div>
+															<div class="order-days-tabs__bonus-hover bonus-hover-order">
+																<div class="bonus-hover-order__header">
+																	<div class="bonus-hover-order__title heading-6">
+																		<h6>
+																			Бонусна система
+																		</h6>
+																	</div>
+																	<div class="bonus-hover-order__close">
+																		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+																			<path d="M18 6.5L6 18.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+																			<path d="M6 6.5L18 18.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+																		</svg>
+																	</div>
+																</div>
+
+																<ul class="bonus-hover-order__list">
+																	<li class="bonus-hover-order__item">
+																		<div class="bonus-hover-order__prize">
+																			<img src="img/icons/prize.svg" alt="Prize icon">
+																		</div>
+																		<div class="bonus-hover-order__wrap">
+																			<span class="subheading">Lorem ipsum dolor sit</span>
+																			<p class="description">Suise facilisi egestas nunc</p>
+																		</div>
+																	</li>
+																	<li class="bonus-hover-order__item">
+																		<div class="bonus-hover-order__prize">
+																			<img src="img/icons/prize.svg" alt="Prize icon">
+																		</div>
+																		<div class="bonus-hover-order__wrap">
+																			<span class="subheading">Lorem ipsum dolor sit</span>
+																			<p class="description">Suise facilisi egestas nunc</p>
+																		</div>
+																	</li>
+																	<li class="bonus-hover-order__item">
+																		<div class="bonus-hover-order__prize">
+																			<img src="img/icons/prize.svg" alt="Prize icon">
+																		</div>
+																		<div class="bonus-hover-order__wrap">
+																			<span class="subheading">Lorem ipsum dolor sit</span>
+																			<p class="description">Suise facilisi egestas nunc</p>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<button type="submit" class="order-days-tabs__button btn btn-we-bk">Замовити програму</button>
+													<div class="order-days-tabs__description">
+														<p>
+															Доставимо ваше харчування <span>післязавтра</span>
+															при замовленні до 12:00
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="step-button-next">
+									<button type="button" data-action="next" class="btn btn-we-bk">
+										<span>Продовжити</span>
+									</button>
+								</div>
+							</div>
+
+							<div class="order-modal__left-column">
+
+								<div class="form-programs__callories callories-programs step" id="step-2">
+									<div class="step-pc-wrapper">
+
+										<button type="button" data-action="prev" class="step-button-prev">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+
+										<div class="callories-programs__title heading-5">
+											<h5>
+												Оберіть Кількість калорій
+											</h5>
+										</div>
+
+										<div class="callories-programs__radios show-pc">
+											<div class="callories-programs__wrap">
+												<!-- <button class="callories-programs__button callories-programs-active">
+										900 ккал
+									</button> -->
+												<div class="callories-programs__radio radio">
+													<input type="radio" id="900" name="callories" value="900" checked />
+													<label for="900">900 ккал</label>
+												</div>
+												<div class="callories-programs__tag">
+													<span>4 страви +</span>
+													<img src="img/icons/bottle.svg" alt="Bottle icon">
+												</div>
+											</div>
+											<div class="callories-programs__wrap">
+												<!-- <button class="callories-programs__button">
+										1200 ккал
+									</button> -->
+												<div class="callories-programs__radio radio">
+													<input type="radio" id="1200" name="callories" value="1200" />
+													<label for="1200">1200 ккал</label>
+												</div>
+												<div class="callories-programs__tag">
+													<span>4 страви +</span>
+													<img src="img/icons/bottle.svg" alt="Bottle icon">
+												</div>
+											</div>
+											<div class="callories-programs__wrap">
+												<!-- <button class="callories-programs__button">
+										1200 ккал
+									</button> -->
+												<div class="callories-programs__radio radio">
+													<input type="radio" id="1500" name="callories" value="1500" />
+													<label for="1500">1500 ккал</label>
+												</div>
+												<div class="callories-programs__tag">
+													<span>4 страви +</span>
+													<img src="img/icons/bottle.svg" alt="Bottle icon">
+												</div>
+											</div>
+											<div class="callories-programs__wrap">
+												<!-- <button class="callories-programs__button">
+										1200 ккал
+									</button> -->
+												<div class="callories-programs__radio radio">
+													<input type="radio" id="1800" name="callories" value="1800" />
+													<label for="1800">1800 ккал</label>
+												</div>
+												<div class="callories-programs__tag">
+													<span>4 страви +</span>
+													<img src="img/icons/bottle.svg" alt="Bottle icon">
+												</div>
+											</div>
+											<div class="callories-programs__wrap">
+												<!-- <button class="callories-programs__button">
+										1200 ккал
+									</button> -->
+												<div class="callories-programs__radio radio">
+													<input type="radio" id="2100" name="callories" value="2100" />
+													<label for="2100">2100 ккал</label>
+												</div>
+												<div class="callories-programs__tag">
+													<span>4 страви +</span>
+													<img src="img/icons/bottle.svg" alt="Bottle icon">
+												</div>
+											</div>
+										</div>
+
+										<div class="callories-programs__radios show-mobile">
+											<div class="callories-programs__select">
+												<div class="callories-programs__minus">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+														<path d="M5 12.644H19" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="callories-programs__nums">
+													<span>
+														900 ккал
+													</span>
+												</div>
+												<div class="callories-programs__plus active-select">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+														<path d="M12 5.64404V19.644" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M5 12.644H19" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="callories-programs__tag">
+												<span>4 страви +</span>
+												<img src="img/icons/bottle.svg" alt="Bottle icon">
+											</div>
+										</div>
+									</div>
+									<div class="step-button-next">
+										<button type="button" data-action="next" class="btn btn-we-bk">
+											<span>Продовжити</span>
+										</button>
+									</div>
+								</div>
+
+								<div class="form-programs__user-info user-info-programs step" id="step-3">
+									<div class="step-pc-wrapper">
+
+										<button type="button" data-action="prev" class="step-button-prev">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+
+										<div class="user-info-programs__title heading-5">
+											<h5>
+												Заповніть форму для замовлення
+											</h5>
+										</div>
+
+										<div class="user-info-programs__form">
+											<div class="user-info-programs__wrap">
+												<label for="user-name" class="user-info-programs__label label">Ваше ім’я</label>
+												<input type="text" name="user-name" id="user-name" placeholder="Введіть ваше ім’я" class="input" required>
+											</div>
+											<div class="user-info-programs__wrap">
+												<label for="user-email" class="user-info-programs__label label">Ваш email</label>
+												<input type="email" name="user-email" id="user-email" placeholder="Введіть ваш email" class="input" required>
+											</div>
+											<div class="user-info-programs__wrap">
+												<label for="user-phone" class="user-info-programs__label label">Ваш номер телефону</label>
+												<input type="tel" name="user-phone" id="user-phone" placeholder="+380 (__) __-__-___" class="input phone" required>
+											</div>
+											<div class="user-info-programs__wrap">
+												<label for="user-address" class="user-info-programs__label label">Ваша адреса</label>
+												<input type="text" name="user-address" id="user-address" placeholder="Введіть вулицю, номер квартири" class="input" required>
+											</div>
+											<div class="user-info-programs__payments payments-wrap">
+												<div class="payments-wrap__title">
+													Оберіть тип оплати:
+												</div>
+												<div class="payments-wrap__radios">
+													<div class="user-info-programs__wrap payment-checkout">
+														<input type="radio" name="payment" id="cash" class="input" checked>
+														<label for="cash" class="user-info-programs__label label">
+															<div class="label-wrap">
+																<span>Онлайн на сайті</span>
+																<img src="img/icons/gpay.svg" alt="Gpay icon">
+																<img src="img/icons/apple-pay.svg" alt="Apple pay icon">
+															</div>
+															<span class="radio-circle">
+																<div class="radio-circle-center"></div>
+															</span>
+														</label>
+													</div>
+													<div class="user-info-programs__wrap payment-checkout">
+														<input type="radio" name="payment" id="online" class="input">
+														<label for="online" class="user-info-programs__label label">
+															<div class="label-wrap">
+																<span>Готівка</span>
+															</div>
+															<span class="radio-circle">
+																<div class="radio-circle-center"></div>
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="horizontal-divider"></div>
+											<div class="days-tabs__order order-days-tabs">
+												<div class="order-days-tabs__title heading-6">
+													<h6>
+														Всього:
+													</h6>
+												</div>
+												<div class="order-days-tabs__prices">
+													<div class="order-days-tabs__price">
+														<div class="order-days-tabs__old">2915 ₴</div>
+														<div class="order-days-tabs__price-wrap">
+															<div class="order-days-tabs__new">1 915 ₴</div>
+															<span>-1 710 ₴</span>
+														</div>
+														<div class="order-days-tabs__per-day">720 ₴/день</div>
+													</div>
+													<div class="order-days-tabs__bonus">
+														<span>+54₴ бонусів</span>
+														<div class="order-days-tabs__info-icon">
+															<img src="img/icons/info.svg" alt="Info icon">
+														</div>
+														<div class="order-days-tabs__bonus-hover bonus-hover-order">
+															<div class="bonus-hover-order__header">
+																<div class="bonus-hover-order__title heading-6">
+																	<h6>
+																		Бонусна система
+																	</h6>
+																</div>
+																<div class="bonus-hover-order__close">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+																		<path d="M18 6.5L6 18.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+																		<path d="M6 6.5L18 18.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+																	</svg>
+																</div>
+															</div>
+
+															<ul class="bonus-hover-order__list">
+																<li class="bonus-hover-order__item">
+																	<div class="bonus-hover-order__prize">
+																		<img src="img/icons/prize.svg" alt="Prize icon">
+																	</div>
+																	<div class="bonus-hover-order__wrap">
+																		<span class="subheading">Lorem ipsum dolor sit</span>
+																		<p class="description">Suise facilisi egestas nunc</p>
+																	</div>
+																</li>
+																<li class="bonus-hover-order__item">
+																	<div class="bonus-hover-order__prize">
+																		<img src="img/icons/prize.svg" alt="Prize icon">
+																	</div>
+																	<div class="bonus-hover-order__wrap">
+																		<span class="subheading">Lorem ipsum dolor sit</span>
+																		<p class="description">Suise facilisi egestas nunc</p>
+																	</div>
+																</li>
+																<li class="bonus-hover-order__item">
+																	<div class="bonus-hover-order__prize">
+																		<img src="img/icons/prize.svg" alt="Prize icon">
+																	</div>
+																	<div class="bonus-hover-order__wrap">
+																		<span class="subheading">Lorem ipsum dolor sit</span>
+																		<p class="description">Suise facilisi egestas nunc</p>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<button type="submit" class="order-days-tabs__button btn btn-we-bk">Замовити програму</button>
+												<div class="order-days-tabs__description">
+													<p>
+														Доставимо ваше харчування <span>післязавтра</span>
+														при замовленні до 12:00
+													</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+
+
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" data-modal="order-selection-modal">
+			<div class="modal-solid order-selection-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M18 6L6 18" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M6 6L18 18" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<div class="modal-body order-selection-modal">
+					<div class="order-selection-modal__content">
+						<div class="order-selection-modal__header">
+							<div class="order-selection-modal__title heading-3">
+								<h3>
+									Оформлення замовлення
+								</h3>
+							</div>
+							<div class="order-selection-modal__text description">
+								<p>
+									Оберіть зручний для вас спосіб:
+								</p>
+							</div>
+						</div>
+
+						<div class="order-selection-modal__buttons">
+							<button class="order-selection-modal__button btn btn-we-bk">
+								Оформити з мененджером
+							</button>
+							<button class="order-selection-modal__button btn btn-bk-bk">
+								Оформити замовлення на сайті
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" data-modal="order-manager-modal">
+			<div class="modal-solid order-manager-solid">
+				<button class="js-close-btn close-btn icon-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M18 6L6 18" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M6 6L18 18" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<div class="modal-body order-manager-modal">
+					<div class="order-manager-modal__content">
+						<div class="order-manager-modal__header">
+							<div class="order-manager-modal__title heading-3">
+								<h3>
+									Оформлення замовлення
+								</h3>
+							</div>
+							<div class="order-manager-modal__text description">
+								<p>
+									Залиште вашу заявку та ми зателефонуємо вам протягом 10 хвилин.
+								</p>
+							</div>
+						</div>
+
+						<form class="order-manager-modal__form">
+							<label for="phone-modal">Ваш номер телефону</label>
+							<input type="tel" name="phone-modal" id="phone-modal" placeholder="+380 (__) __-__-___">
+							<button type="submit" class="order-manager-modal__button btn btn-we-bk">Підтвердити заявку</button>
+						</form>
+
+						<a href="#" class="order-manager-modal__link link-btn">
+							Оформити замовлення на сайті
+						</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20251219145741"></script>
+</body>
+
+</html>
