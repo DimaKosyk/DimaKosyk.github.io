@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Main page</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20260606152647">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap&_v=20260606152647" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap&_v=20260606152647" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20260606152647">
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr?_v=20260606152647"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<img class="decore-image-1" src="img/decore-1.svg" alt="Image">
+		<img class="decore-image-2" src="img/decore-2.svg" alt="Image">
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+					<a href="#" class="logo">
+						<img src="img/logo.svg" alt="Logo image">
+					</a>
+					<div class="header__content">
+						<div class="header__top">
+							<div class="project-title">monblanproject</div>
+							<div class="creation-date">Start on 17-02-2016</div>
+						</div>
+
+						<div class="header__infos">
+							<a href="#">
+								<strong>870</strong> posts
+							</a>
+							<a href="#">
+								<strong>11,787</strong> followers
+							</a>
+							<a href="#">
+								<strong>112</strong> following
+							</a>
+						</div>
+
+						<div class="header__dates">
+							<div class="datepicker">
+								<span class="datepicker__label">Date</span>
+
+								<div class="datepicker__inputs">
+									<div class="datepicker__field" id="datepicker-from">
+										<input type="text" id="datepicker-from-input" placeholder="from" readonly>
+										<button class="datepicker-btn datepicker-clear" id="datepicker-from-clear" title="Datepicker clear" aria-label="Datepicker clear" style="display:none">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.6569 16.2426L13.4142 12L17.6569 7.75736L16.2426 6.34315L12 10.5858L7.75736 6.34315L6.34315 7.75736L10.5858 12L6.34315 16.2426L7.75736 17.6569L12 13.4142L16.2426 17.6569L17.6569 16.2426Z" fill="#5F5F5F" />
+											</svg>
+										</button>
+										<button class="datepicker-btn" id="datepicker-calendar-from" title="Open calendar" aria-label="Open calendar">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7 11H9V13H7V11ZM7 15H9V17H7V15ZM11 11H13V13H11V11ZM11 15H13V17H11V15ZM15 11H17V13H15V11ZM15 15H17V17H15V15Z" fill="#5F5F5F" />
+												<path d="M5 22H19C20.103 22 21 21.103 21 20V6C21 4.897 20.103 4 19 4H17V2H15V4H9V2H7V4H5C3.897 4 3 4.897 3 6V20C3 21.103 3.897 22 5 22ZM19 8L19.001 20H5V8H19Z" fill="#5F5F5F" />
+											</svg>
+										</button>
+									</div>
+
+									<div class="datepicker__field" id="datepicker-to">
+										<input type="text" id="datepicker-to-input" placeholder="to" readonly>
+										<button class="datepicker-btn datepicker-clear" id="datepicker-to-clear" title="Datepicker clear" aria-label="Datepicker clear" style="display:none">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.6569 16.2426L13.4142 12L17.6569 7.75736L16.2426 6.34315L12 10.5858L7.75736 6.34315L6.34315 7.75736L10.5858 12L6.34315 16.2426L7.75736 17.6569L12 13.4142L16.2426 17.6569L17.6569 16.2426Z" fill="#5F5F5F" />
+											</svg>
+										</button>
+										<button class="datepicker-btn" id="datepicker-calendar-to" title="Open calendar" aria-label="Open calendar">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7 11H9V13H7V11ZM7 15H9V17H7V15ZM11 11H13V13H11V11ZM11 15H13V17H11V15ZM15 11H17V13H15V11ZM15 15H17V17H15V15Z" fill="#5F5F5F" />
+												<path d="M5 22H19C20.103 22 21 21.103 21 20V6C21 4.897 20.103 4 19 4H17V2H15V4H9V2H7V4H5C3.897 4 3 4.897 3 6V20C3 21.103 3.897 22 5 22ZM19 8L19.001 20H5V8H19Z" fill="#5F5F5F" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+
+			<div class="posts">
+				<div class="container">
+					<div class="posts__body">
+						<div class="posts__buttons">
+							<button type="button" class="grid-button" aria-label="Button grids" title="Button grids">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#grid"></use>
+								</svg>
+							</button>
+							<button type="button" class="row-button active" aria-label="Button rows" title="Button rows">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#row"></use>
+								</svg>
+							</button>
+						</div>
+
+						<div class="posts__content">
+							<div class="posts__items">
+								<div class="posts-rows active">
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-1.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-2.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-3.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-4.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-5.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-6.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-7.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-8.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-9.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--row">
+										<div class="posts-item__image">
+											<img src="img/posts/post-10.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="posts-grids">
+									<div class="posts-item posts-item--grid">
+										<div class="posts-item__image">
+											<img src="img/posts/post-1.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--grid">
+										<div class="posts-item__image">
+											<img src="img/posts/post-2.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--grid">
+										<div class="posts-item__image">
+											<img src="img/posts/post-3.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--grid">
+										<div class="posts-item__image">
+											<img src="img/posts/post-4.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--grid">
+										<div class="posts-item__image">
+											<img src="img/posts/post-5.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--grid">
+										<div class="posts-item__image">
+											<img src="img/posts/post-6.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--grid">
+										<div class="posts-item__image">
+											<img src="img/posts/post-7.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="posts-item posts-item--grid">
+										<div class="posts-item__image">
+											<img src="img/posts/post-8.webp" alt="Post image">
+										</div>
+										<div class="posts-item__content">
+											<div class="posts-item__info">
+												<span>Today</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>128</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>31</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>9-08-2016</span>
+												<ul>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#heart"></use>
+														</svg>
+														<span>67</span>
+													</li>
+													<li>
+														<svg>
+															<use xlink:href="img/icons/icons.svg#comment"></use>
+														</svg>
+														<span>22</span>
+													</li>
+												</ul>
+											</div>
+											<div class="posts-item__info">
+												<span>Image upload</span>
+												<span>11-04-2016</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<button type="button" class="load-more-button" aria-label="Load more button" title="Load more button">
+								Load More
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20260606152647"></script>
+</body>
+
+</html>

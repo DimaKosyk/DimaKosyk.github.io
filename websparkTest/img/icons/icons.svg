@@ -1,0 +1,22 @@
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 18 18" fill="none" id="comment" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 3C16.5 2.175 15.825 1.5 15 1.5H3C2.175 1.5 1.5 2.175 1.5 3V12C1.5 12.825 2.175 13.5 3 13.5H13.5L16.5 16.5V3Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 22 22" fill="none" id="grid" xmlns="http://www.w3.org/2000/svg">
+<rect width="6" height="6" fill="currentColor"/>
+<rect x="8" width="6" height="6" fill="currentColor"/>
+<rect x="16" width="6" height="6" fill="currentColor"/>
+<rect y="8" width="6" height="6" fill="currentColor"/>
+<rect y="16" width="6" height="6" fill="currentColor"/>
+<rect x="8" y="8" width="6" height="6" fill="currentColor"/>
+<rect x="8" y="16" width="6" height="6" fill="currentColor"/>
+<rect x="16" y="8" width="6" height="6" fill="currentColor"/>
+<rect x="16" y="16" width="6" height="6" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 18 18" fill="none" id="heart" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 6.3C1.49991 5.76177 1.6071 5.22893 1.8153 4.73261C2.02351 4.23629 2.32855 3.78644 2.71261 3.40937C3.09667 3.03229 3.55203 2.73555 4.05209 2.53649C4.55215 2.33742 5.08687 2.24003 5.625 2.25C6.26172 2.24662 6.89189 2.3786 7.47374 2.6372C8.05559 2.8958 8.57584 3.27511 9 3.75C9.42416 3.27511 9.94441 2.8958 10.5263 2.6372C11.1081 2.3786 11.7383 2.24662 12.375 2.25C12.9131 2.24003 13.4479 2.33742 13.9479 2.53649C14.448 2.73555 14.9033 3.03229 15.2874 3.40937C15.6714 3.78644 15.9765 4.23629 16.1847 4.73261C16.3929 5.22893 16.5001 5.76177 16.5 6.3C16.5 10.317 11.7157 13.35 9 15.75C6.29025 13.3297 1.5 10.32 1.5 6.3Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 24 22" fill="none" id="row" xmlns="http://www.w3.org/2000/svg">
+<rect width="6" height="6" fill="currentColor"/>
+<rect y="8" width="6" height="6" fill="currentColor"/>
+<rect y="16" width="6" height="6" fill="currentColor"/>
+<rect x="9" y="10" width="15" height="2" fill="currentColor"/>
+<rect x="9" y="18" width="15" height="2" fill="currentColor"/>
+<rect x="9" y="2" width="15" height="2" fill="currentColor"/>
+</symbol></svg>
